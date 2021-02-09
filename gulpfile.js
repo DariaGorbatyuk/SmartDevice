@@ -1,6 +1,7 @@
 "use strict";
 
 var gulp = require("gulp");
+var pug = require('gulp-pug');
 var plumber = require("gulp-plumber");
 var sourcemap = require("gulp-sourcemaps");
 var sass = require("gulp-sass");
@@ -21,7 +22,7 @@ gulp.task("css", function () {
     .pipe(plumber())
     .pipe(sourcemap.init())
     .pipe(sass())
-    .pipe(postcss([ autoprefixer() ]))
+    .pipe(postcss([autoprefixer()]))
     .pipe(csso())
     .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
@@ -48,7 +49,7 @@ gulp.task("refresh", function (done) {
   done();
 });
 
-gulp.task("images", function() {
+gulp.task("images", function () {
   return gulp.src("source/img/**/*.{png,jpg,svg}")
     .pipe(imagemin([
       imagemin.optipng({optimizationLevel: 3}),
@@ -87,12 +88,22 @@ gulp.task("copy", function () {
     "source/img/**",
     "source/js/**",
     "source//*.ico"
-    ], {
-      base: "source"
-    })
-  .pipe(gulp.dest("build"));
+  ], {
+    base: "source"
+  })
+    .pipe(gulp.dest("build"));
 });
 
+gulp.task("pug", function () {
+  gulp.src('source/pug/*.pug')
+    .pipe(pug({pretty: '\t'}))
+    .pipe(gulp.dest('build'))
+});
+gulp.task('pug', function buildHTML() {
+  return gulp.src('source/pug/*.pug')
+    .pipe(pug({pretty: '\t'}))
+    .pipe(gulp.dest('build'))
+});
 gulp.task("clean", function () {
   return del("build");
 });
