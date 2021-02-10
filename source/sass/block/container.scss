@@ -1,0 +1,9 @@
+.container{
+  max-width: $l-end;
+  min-width: $small;
+  margin: 0 auto;
+
+  @media (max-width: $m-end) {
+    width: 100%;
+  }
+}
