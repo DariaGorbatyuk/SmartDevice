@@ -11,6 +11,11 @@
   @media (min-resolution: 2dppx) {
     background-image: url("../img/header2x.png");
   }
+
+  @media (max-width: $m-end) {
+    padding-top: 21px;
+    padding-bottom: 72px;
+  }
 }
 
 .header__top {
@@ -41,6 +46,10 @@
   &:first-child {
     margin-left: 0;
   }
+
+  @media (max-width: $m-end) {
+    margin-left: 24px;
+  }
 }
 
 .header__nav-link {
@@ -53,8 +62,26 @@
   align-items: center;
   justify-content: space-between;
 
-  span {
-    padding-left: 17px;
+  @media (max-width: $m-end) {
+    padding: 10px 0 10px 10px;
+  }
+}
+
+.header__icon {
+  @media (max-width: $m-end) {
+    @include size(25px, 19px);
+
+    &--tel {
+      @include size(24px, 24px);
+    }
+  }
+}
+
+.header__nav-link span {
+  padding-left: 17px;
+
+  @media (max-width: $m-end) {
+    display: none;
   }
 }
 
@@ -73,10 +100,18 @@
   border-radius: 5px;
   padding: 13px 0;
   margin-left: 42px;
+
+  @media (max-width: $m-end) {
+    display: none;
+  }
 }
 
 .header__bottom {
   padding-top: 230px;
+
+  @media (max-width: $m-end) {
+    padding-top: 116px;
+  }
 }
 
 .header__bottom h1 {
@@ -87,6 +122,13 @@
   letter-spacing: 0.07em;
   text-transform: uppercase;
   margin: 0 0 29px;
+
+  @media (max-width: $m-end) {
+    font-size: 60px;
+    line-height: 70px;
+    padding: 0 35% 0 8.9%;
+  }
+
 }
 
 .header__bottom p {
@@ -100,12 +142,26 @@
   padding-right: 49%;
   margin-bottom: 45px;
 
-  &::before{
+  &::before {
     @include pseudo();
     @include size(66px, 2px);
     background-color: $white;
     left: 0;
     top: 16px;
+  }
+
+  @media (max-width: $m-end) {
+    font-size: 18px;
+    line-height: 156.8%;
+    padding-left: 16%;
+    padding-right: 36%;
+    margin-bottom: 54px;
+
+    &::before {
+      @include size(33px, 2px);
+      left: 9%;
+      top: 16px;
+    }
   }
 }
 
@@ -123,10 +179,16 @@
   margin-left: 6.6%;
   padding: 17px 0;
   margin-bottom: 94px;
+  border-radius: 5px;
+
+  @media (max-width: $m-end) {
+    margin-left: 15.8%;
+    width: 379px;
+  }
 }
 
-.header__scroll{
- transform: rotate(180deg);
+.header__scroll {
+  transform: rotate(180deg);
   font-family: $mono;
   font-weight: normal;
   font-size: 14px;
@@ -137,4 +199,7 @@
   min-width: 0;
   word-break: break-word;
 
+  @media (max-width: $m-end) {
+    display: none;
+  }
 }
