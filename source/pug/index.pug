@@ -10,19 +10,19 @@ html(lang="ru")
     header.header
       div.container
         div.header__top
-          a.header__logo(href="#")
+          a.header__logo
             picture
               source(media="(max-width: 767px)" srcset="./img/brain-small.svg")
               img(src="./img/icon-logo.svg")
           nav.header__nav
             ul.header__nav-list
               li.header__nav-item
-                a.header__nav-link
+                a.header__nav-link(href="maltio: info@sd.ru")
                   svg.header__icon(width="19" height="14" role="img" aria-label="Почта")
                     use(xlink:href="./img/sprite.svg#icon-email")
                   span info@sd.ru
               li.header__nav-item
-                a.header__nav-link
+                a.header__nav-link(href="tel:+74950005252")
                   svg.header__icon.header__icon--tel(width="18" height="18" role="img" aria-label="Телефон")
                     use(xlink:href="./img/sprite.svg#icon-phone")
                   span +7 (495) 000 52 52
@@ -30,7 +30,7 @@ html(lang="ru")
         div.header__bottom
           h1 Печатные платы
           b производство и монтаж, поставка комплектующих, блоков и модулей
-          a.header__link-modal
+          a.header__link-modal(href="#")
             span Получить бесплатную консультацию
             p Бесплатная консультация
           a.header__scroll(href="#about") Скролл вниз
