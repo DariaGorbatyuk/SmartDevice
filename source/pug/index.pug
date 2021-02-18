@@ -9,7 +9,7 @@ html(lang="ru")
   body
     header.header
       div.container
-          div.header__top
+        div.header__top
           a.header__logo(href="#")
             img(src="./img/icon-logo.svg")
           nav.header__nav
@@ -31,63 +31,98 @@ html(lang="ru")
           a.header__link-modal Получить бесплатную консультацию
           a.header__scroll(href="#about") Скролл вниз
     main
-      //section.features
-      //  div.container
-      //    ul.features__list
-      //      li.features__item.card
-      //        span Оперативные сроки
-      //        p Усовершенствованная логистическая система позволяет нам просчитывать стоимость, производить и доставлять заказы плат и комплектующих в самые короткие сроки
-      //      li.features__item.card
-      //        span Крупные поставщики
-      //        p Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC, REFOND. Сотрудничество с такими компаниями обеспичивает хорошее качество нашей продукции.
-      //      li.features__item.card
-      //        span Полная конфиденциальность
-      //        p По желанию клиента  мы обеспечиваем полную конфеденциальность.
-      //      li.features__item.card
-      //        span Персонализация стоимости
-      //        p Мы  подбираем определенную фабрику, поставщиков, вид доставки, чтобы установить ту цену, которая Вас устраивает.
-      //section.about
-      //  div.container
-      //    h2 О компании
-      //    p Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии с 1997 года. Выполняем срочные заказы и пилотные образцы до 10 дней.
-      //      br
-      //      | Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.
-      //    link.about__excerpt
-      //section.offer
-      //  h2 Service Device предлагает следующие товары и услуги
-      //    ul.offer__list
-      //      li.offer__item
-      //        p Производство
-      //          br
-      //          |печатных плат
-      //        a(aria-label="Подробнее")
-      //      li.offer__item
-      //        p Монтаж печатных
-      //          br
-      //          |плат
-      //        a(aria-label="Подробнее")
-      //      li.offer__item
-      //        p Комплектующие
-      //          br
-      //          |для светотехники
-      //        a(aria-label="Подробнее")
-      //section.question
-      //  h2 Остались вопросы? Задайте их нам!
-      //  p Мы проконсультируем Вас бесплатно
-      //  form.question__form.form-question
-      //    div.form-question__inputs
-      //      div.form-question__inp
-      //        label.visually-hidden(for="name") Имя
-      //        input#name(type="text" name="name" placeholder="Имя")
-      //      div.form-question__inp
-      //        label.visually-hidden(for="tel") Телефон
-      //        input#tel(type="tel" name="tel" placeholder="Телефон")
-      //    div.form-question__text
-      //      label.visually-hidden(for="text") Ваш вопрос
-      //      textarea#text Ваш вопрос
-      //    div.form-question__btns
-      //      div.form-question__check
-      //        input#agree(type="checkbox" name="agree" checked)
-      //        label(for="agree") Я согласен на обработку  персональных данных
-      //      button.form-question__btn(type="submit") Задать вопрос
-
+      section.features
+        div.container
+          ul.features__list
+            li.features__item.card
+              span Оперативные сроки
+              p Усовершенствованная логистическая система позволяет нам просчитывать стоимость, производить и доставлять заказы плат и комплектующих в самые короткие сроки
+            li.features__item.card
+              span Крупные поставщики
+              p Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC, REFOND. Сотрудничество с такими компаниями обеспичивает хорошее качество нашей продукции.
+            li.features__item.card
+              span Полная конфиденциальность
+              p По желанию клиента  мы обеспечиваем полную конфеденциальность.
+            li.features__item.card
+              span Персонализация стоимости
+              p Мы  подбираем определенную фабрику, поставщиков, вид доставки, чтобы установить ту цену, которая Вас устраивает.
+      section.about
+        div.container
+          h2 О компании
+          p Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии с 1997 года. Выполняем срочные заказы и пилотные образцы до 10 дней.
+            br
+            | Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.
+          link.about__excerpt
+      section.offer
+        h2 Service Device предлагает следующие товары и услуги
+          ul.offer__list
+            li.offer__item
+              p Производство
+                br
+                |печатных плат
+              a(aria-label="Подробнее")
+            li.offer__item
+              p Монтаж печатных
+                br
+                |плат
+              a(aria-label="Подробнее")
+            li.offer__item
+              p Комплектующие
+                br
+                |для светотехники
+              a(aria-label="Подробнее")
+      section.question
+        h2 Остались вопросы? Задайте их нам!
+        p Мы проконсультируем Вас бесплатно
+        form.question__form.form-question
+          div.form-question__inputs
+            div.form-question__inp
+              label.visually-hidden(for="name") Имя
+              input#name(type="text" name="name" placeholder="Имя")
+            div.form-question__inp
+              label.visually-hidden(for="tel") Телефон
+              input#tel(type="tel" name="tel" placeholder="Телефон")
+          div.form-question__text
+            label.visually-hidden(for="text") Ваш вопрос
+            textarea#text Ваш вопрос
+          div.form-question__btns
+            div.form-question__check
+              input#agree(type="checkbox" name="agree" checked)
+              label(for="agree") Я согласен на обработку  персональных данных
+            button.form-question__btn(type="submit") Задать вопрос
+    footer.footer
+      div.container
+        div.footer__top
+          div.footer__socials.socials
+            a(href="#")
+              img(src="./img/icon-logo.svg")
+            ul.socials__list
+              li.socials__item
+                a(href="#")
+                  img(src="./img/icon-f.svg")
+              li.socials__item
+                a(href="#")
+                  img(src="./img/icon-o.svg")
+              li.socials__item
+                a(href="#")
+                  img(src="./img/icon-vk.svg")
+          div.footer__nav.footer-nav
+            details
+              summary Разделы сайта
+              ul.footer-nav__list
+                each name in ['О компании', 'Продукты', 'Производство печатных плат', 'Монтаж печатных плат', 'Комплектующие', 'Доставка', "Контакты"]
+                  li.footer-nav__item
+                    a(href="#")= name
+          div.footer__contacts
+            details
+              summary Наш офис
+              address
+                p г. Мытищи, Олимпийский проспект, д.10
+                a(href="tel:+74955894050") +7 (495) 589-40-50
+                a(href="tel:+79250038767") +7 (925) 003-87-67
+                a(href="tel:+792692608079") +7 (926) 926-080-79
+        div.footer__bottom
+          p Все права защищены
+          span 1999-2018 SD Service Devices
+          a.footer__copyright Условия конфиденциальности
+          a.footer__developed Developed by wow studio

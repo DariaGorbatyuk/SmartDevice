@@ -1,6 +1,7 @@
 .container{
   max-width: $l-end;
   min-width: $small;
+  padding: 0 1.57%;
   margin: 0 auto;
 
   @media (max-width: $m-end) {

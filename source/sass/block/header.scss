@@ -1,10 +1,45 @@
 .header {
   background-image: url("../img/header.png");
   background-color: $indigo;
+  background-size: cover;
+  background-repeat: no-repeat;
   color: $white;
+  padding-top: 32px;
+  padding-bottom: 83px;
+  position: relative;
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/header2x.png");
+  }
+}
+
+.header__top {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.header__logo {
+  display: block;
+  padding-right: 10px;
+  margin-right: auto;
+}
+
+.header__nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.header__nav-item {
+  list-style: none;
+  margin-left: 68px;
+
+  &:first-child {
+    margin-left: 0;
   }
 }
 
@@ -13,6 +48,14 @@
   font-weight: normal;
   font-size: 16px;
   line-height: 18px;
+  padding: 10px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  span {
+    padding-left: 17px;
+  }
 }
 
 .header__call-btn {
@@ -24,6 +67,16 @@
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: inherit;
+  display: block;
+  width: 180px;
+  border: 1px solid $white;
+  border-radius: 5px;
+  padding: 13px 0;
+  margin-left: 42px;
+}
+
+.header__bottom {
+  padding-top: 230px;
 }
 
 .header__bottom h1 {
@@ -33,6 +86,7 @@
   line-height: 94px;
   letter-spacing: 0.07em;
   text-transform: uppercase;
+  margin: 0 0 29px;
 }
 
 .header__bottom p {
@@ -40,9 +94,22 @@
   font-weight: normal;
   font-size: 22px;
   line-height: 34px;
+  margin: 0;
+  padding-left: 94px;
+  position: relative;
+  padding-right: 49%;
+  margin-bottom: 45px;
+
+  &::before{
+    @include pseudo();
+    @include size(66px, 2px);
+    background-color: $white;
+    left: 0;
+    top: 16px;
+  }
 }
 
-.header__link-modal{
+.header__link-modal {
   width: 407px;
   background-color: $blue;
   font-family: $roboto;
@@ -52,5 +119,22 @@
   text-align: center;
   letter-spacing: 0.05em;
   text-transform: uppercase;
+  display: block;
+  margin-left: 6.6%;
+  padding: 17px 0;
+  margin-bottom: 94px;
 }
 
+.header__scroll{
+ transform: rotate(180deg);
+  font-family: $mono;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  opacity: 0.5;
+  writing-mode: vertical-rl;
+  max-height: 200px;
+  min-width: 0;
+  word-break: break-word;
+
+}
