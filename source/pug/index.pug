@@ -11,7 +11,9 @@ html(lang="ru")
       div.container
         div.header__top
           a.header__logo(href="#")
-            img(src="./img/icon-logo.svg")
+            picture
+              source(media="(max-width: 767px)" srcset="./img/brain-small.svg")
+              img(src="./img/icon-logo.svg")
           nav.header__nav
             ul.header__nav-list
               li.header__nav-item
@@ -27,8 +29,10 @@ html(lang="ru")
           a.header__call-btn(href="#") Заказать звонок
         div.header__bottom
           h1 Печатные платы
-          p производство и монтаж, поставка комплектующих, блоков и модулей
-          a.header__link-modal Получить бесплатную консультацию
+          b производство и монтаж, поставка комплектующих, блоков и модулей
+          a.header__link-modal
+            span Получить бесплатную консультацию
+            p Бесплатная консультация
           a.header__scroll(href="#about") Скролл вниз
     main
       section.features
