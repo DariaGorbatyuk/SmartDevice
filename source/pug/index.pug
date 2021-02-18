@@ -37,17 +37,26 @@ html(lang="ru")
     main
       section.features
         div.container
+          h2.visually-hidden Преимущества компании
           ul.features__list
-            li.features__item.card
+            li.features__item.features__item--time
+              svg(width="29" height="35" role="img")
+                use(xlink:href="./img/sprite.svg#icon-stopwatch")
               span Оперативные сроки
               p Усовершенствованная логистическая система позволяет нам просчитывать стоимость, производить и доставлять заказы плат и комплектующих в самые короткие сроки
-            li.features__item.card
+            li.features__item.features__item--suppliers
+              svg(width="35" height="35" role="img")
+                use(xlink:href="./img/sprite.svg#icon-hired")
               span Крупные поставщики
               p Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC, REFOND. Сотрудничество с такими компаниями обеспичивает хорошее качество нашей продукции.
-            li.features__item.card
+            li.features__item.features__item--confidentiality
+              svg(width="36" height="31" role="img")
+                use(xlink:href="./img/sprite.svg#icon-detective")
               span Полная конфиденциальность
               p По желанию клиента  мы обеспечиваем полную конфеденциальность.
-            li.features__item.card
+            li.features__item.features__item--price
+              svg(width="35" height="35" role="img")
+                use(xlink:href="./img/sprite.svg#icon-tag")
               span Персонализация стоимости
               p Мы  подбираем определенную фабрику, поставщиков, вид доставки, чтобы установить ту цену, которая Вас устраивает.
       section.about

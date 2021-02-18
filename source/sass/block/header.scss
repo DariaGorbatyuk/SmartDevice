@@ -35,13 +35,14 @@
 .header__top {
   display: flex;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .header__logo {
   display: block;
   padding-right: 10px;
   margin-right: auto;
+  align-items: flex-start;
 
   @media (max-width: $s-end) {
     padding-top: 7px;
@@ -137,6 +138,7 @@
   border-radius: 5px;
   padding: 13px 0;
   margin-left: 42px;
+  align-items: flex-start;
 
   &:hover,
   &:focus {

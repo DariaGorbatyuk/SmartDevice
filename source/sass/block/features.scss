@@ -1,0 +1,63 @@
+.features {
+  padding-top: 112px;
+}
+
+.features__list {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 8.6%;
+  justify-content: space-between;
+}
+
+.features__item {
+  list-style: none;
+  position: relative;
+  flex: 0 1 48.8%;
+  padding: 97px 38px 49px 43px;
+  margin-bottom: 29px;
+
+  &::before {
+    @include pseudo();
+    @include size(3px, 100%);
+    background-color: $blue;
+    left: 0;
+    top: 0;
+  }
+
+  &:hover {
+    background-color: $blue;
+    transition: all 700ms ease-in;
+
+    svg {
+      stroke: $white;
+    }
+
+    span,
+    p {
+      color: $white;
+    }
+  }
+}
+.features__item svg {
+  position: absolute;
+  top: 41px;
+}
+.features__item span {
+  font-family: $roboto;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 34px;
+  color: $blue;
+  display: block;
+  margin-bottom: 16px;
+}
+
+.features__item p {
+  font-family: $mono;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: $gray;
+  margin-top: 0;
+}
