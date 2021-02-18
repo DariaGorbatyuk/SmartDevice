@@ -5,5 +5,10 @@
 
   @media (max-width: $m-end) {
     width: 100%;
+    padding: 3.24%;
+  }
+
+  @media (max-width: $s-end) {
+    padding: 4.68%;
   }
 }

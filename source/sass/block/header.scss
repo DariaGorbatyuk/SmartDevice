@@ -1,0 +1,56 @@
+.header {
+  background-image: url("../img/header.png");
+  background-color: $indigo;
+  color: $white;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/header2x.png");
+  }
+}
+
+.header__nav-link {
+  font-family: $mono;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.header__call-btn {
+  font-family: $roboto;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: inherit;
+}
+
+.header__bottom h1 {
+  font-family: $roboto;
+  font-weight: bold;
+  font-size: 80px;
+  line-height: 94px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.header__bottom p {
+  font-family: $mono;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 34px;
+}
+
+.header__link-modal{
+  width: 407px;
+  background-color: $blue;
+  font-family: $roboto;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
