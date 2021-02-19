@@ -1,7 +1,7 @@
 .about {
   color: $gray;
-  padding: 76px 9.28% 15px 300px;
   position: relative;
+  padding: 76px 9.28% 111px 300px;
 
   &::before{
     @include pseudo();

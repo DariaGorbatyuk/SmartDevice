@@ -68,23 +68,27 @@ html(lang="ru")
             span (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.
           a.about__excerpt(href="#") Подробнее
       section.offer
-        h2 Service Device предлагает следующие товары и услуги
-          ul.offer__list
-            li.offer__item
-              p Производство
-                br
-                |печатных плат
-              a(aria-label="Подробнее")
-            li.offer__item
-              p Монтаж печатных
-                br
-                |плат
-              a(aria-label="Подробнее")
-            li.offer__item
-              p Комплектующие
-                br
-                |для светотехники
-              a(aria-label="Подробнее")
+        div.container
+            h2 Service Device предлагает следующие товары и услуги
+            ul.offer__list
+              li.offer__item.offer__item--production
+                p Производство
+                  br
+                  |печатных плат
+                a.offer__link(aria-label="Подробнее" href="#")
+                span
+              li.offer__item.offer__item--installation
+                p Монтаж печатных
+                  br
+                  |плат
+                a.offer__link(aria-label="Подробнее" href="#")
+                span
+              li.offer__item.offer__item--light
+                p Комплектующие
+                  br
+                  |для светотехники
+                a.offer__link(aria-label="Подробнее" href="#")
+                span
       section.question
         h2 Остались вопросы? Задайте их нам!
         p Мы проконсультируем Вас бесплатно

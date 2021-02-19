@@ -1,0 +1,81 @@
+.offer {
+  background-color: $indigo;
+  color: $white;
+  font-family: $roboto;
+  padding-top: 88px;
+  padding-bottom: 125px;
+}
+
+.offer h2 {
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 51px;
+  margin-top: 0;
+  padding-left: 8.5%;
+  margin-bottom: 53px;
+}
+
+.offer__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0 8.5% 0;
+  justify-content: center;
+}
+
+.offer__item {
+  list-style: none;
+  flex: 0 1 370px;
+  background-size: cover;
+  min-height: 620px;
+  position: relative;
+  margin-right: 30px;
+  margin-bottom: 20px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &--production {
+    background-image: linear-gradient(rgba($indigo, 0.8)), url("../img/production.jpg");
+  }
+
+  &--installation {
+    background-image: linear-gradient(rgba($indigo, 0.8)), url("../img/mounting.jpg");
+  }
+
+  &--light {
+    background-image: linear-gradient(rgba($indigo, 0.8)), url("../img/light.jpg");
+  }
+}
+
+.offer__item p {
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 30px;
+  margin-top: 49px;
+  margin-bottom: 0;
+  margin-left: 12%;
+
+}
+
+.offer__link {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  top: 0;
+  left: 0;
+}
+
+.offer span {
+  display: block;
+  @include size(63px, 63px);
+  background-color: $blue;
+  background-image: url("../img/icon-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
