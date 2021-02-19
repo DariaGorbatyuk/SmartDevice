@@ -13,10 +13,15 @@
       color: inherit;
       font-family: inherit;
     }
-  }
 
-  @media (max-width: $m-end) {
+    &:hover {
+      cursor: pointer;
+      background-color: rgba($white, 0.2);
+    }
 
+    &:focus {
+      outline: 1px solid $white;
+    }
   }
 }
 
@@ -40,6 +45,15 @@
       width: 280px;
     }
   }
+  @media (max-width: $s-end) {
+    margin-right: 0;
+    width: 100%;
+    margin-bottom: 32px;
+
+    input {
+      width: 100%;
+    }
+  }
 }
 
 
@@ -55,9 +69,18 @@
 
   @media (max-width: $m-end) {
     margin-bottom: 42px;
-    textarea{
+    textarea {
       width: 591px;
       height: 160px;
+    }
+  }
+  @media (max-width: $s-end) {
+    width: 100%;
+    margin-bottom: 25px;
+
+    textarea {
+      width: 100%;
+      height: 104px;
     }
   }
 }
@@ -67,8 +90,8 @@
   display: flex;
   justify-content: space-between;
 
-  @media (max-width: $m-end) {
-
+  @media (max-width: $s-end) {
+    flex-wrap: wrap;
   }
 }
 
@@ -80,6 +103,10 @@
   opacity: 0.8;
   margin-top: 8px;
   flex-basis: 50%;
+
+  &:hover{
+    opacity: 1;
+  }
 
   label {
     display: block;
@@ -104,8 +131,9 @@
     top: 5px;
   }
 
-  @media (max-width: $m-end) {
-
+  @media (max-width: $s-end) {
+    flex-basis: 100%;
+    margin-top: 0;
   }
 }
 
@@ -127,8 +155,25 @@
   padding-top: 14px;
   margin-right: 36px;
 
+  &:hover,
+  &:focus {
+    outline: none;
+    box-shadow: inset 272px 0 0 0 $white;
+    color: $blue;
+    transition: box-shadow 600ms ease-in 50ms, color 300ms linear;
+  }
+
+  &:active {
+    color: rgba($blue, 0.7);
+  }
+
   @media (max-width: $m-end) {
     flex-basis: 279px;
     margin-right: 40px;
+  }
+  @media (max-width: $s-end) {
+    flex-basis: 100%;
+    margin-right: 0;
+    margin-bottom: 32px;
   }
 }

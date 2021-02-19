@@ -104,13 +104,11 @@ html(lang="ru")
                 input#tel(type="tel" name="tel" placeholder="Телефон")
               div.form-question__text
                 label.visually-hidden(for="text") Ваш вопрос
-                textarea#text Ваш вопрос
+                textarea(placeholder="Ваш вопрос")
               div.form-question__btns
                 div.form-question__check
                   input#agree.visually-hidden(type="checkbox" name="agree" checked)
-                  label(for="agree") Я согласен на обработку
-                    br
-                    | персональных данных
+                  label(for="agree") Я согласен на обработку персональных данных
                 button.form-question__btn(type="submit") Задать вопрос
     footer.footer
       div.container
