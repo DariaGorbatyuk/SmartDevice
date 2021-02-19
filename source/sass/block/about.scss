@@ -10,6 +10,25 @@
     background-repeat: no-repeat;
     left: 92px;
     top: 81px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/year2x.png");
+    }
+  }
+
+  @media (max-width: $m-end) {
+    padding-top: 27px;
+    padding-left: 186px;
+    padding-right: 6px;
+    padding-bottom: 20px;
+
+    &::before{
+      @include size(185px, 365px);
+      left: 0;
+      background-size: 260px 361px;
+      background-position: center;
+      top: 25px;
+    }
   }
 }
 
@@ -20,6 +39,11 @@
   line-height: 51px;
   margin-top: 0;
   margin-bottom: 23px;
+
+  @media (max-width: $m-end) {
+    font-size: 32px;
+    line-height: 140.62%; //45
+  }
 }
 
 .about p {
@@ -34,6 +58,27 @@
   }
   &:nth-of-type(2n){
     margin-bottom: 38px;
+  }
+
+  @media (max-width: $m-end) {
+    &:nth-of-type(2n){
+      margin-bottom: 43px;
+    }
+  }
+}
+
+.about span{
+  &:nth-of-type(1n){
+    display: none;
+  }
+
+  @media (max-width: $m-end) {
+    &:nth-of-type(1n){
+      display: inline;
+    }
+    &:nth-of-type(2n){
+      display: none;
+    }
   }
 }
 
@@ -51,4 +96,8 @@
   color: $blue;
   border-radius: 5px;
   padding: 13px 0;
+
+  @media (max-width: $m-end) {
+
+  }
 }
