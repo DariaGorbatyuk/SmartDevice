@@ -17,10 +17,7 @@
   }
 
   @media (max-width: $m-end) {
-    padding-top: 27px;
-    padding-left: 186px;
-    padding-right: 6px;
-    padding-bottom: 20px;
+    padding: 27px 6px 84px 186px;
 
     &::before{
       @include size(185px, 365px);
@@ -32,7 +29,7 @@
   }
 
   @media (max-width: $s-end) {
-    padding: 40px 0 10px 2px;
+    padding: 40px 0 65px 2px;
     &::before{
       display: none;
     }

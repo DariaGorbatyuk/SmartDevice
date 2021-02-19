@@ -4,6 +4,16 @@
   font-family: $roboto;
   padding-top: 88px;
   padding-bottom: 125px;
+
+  @media (max-width: $m-end) {
+    padding-top: 48px;
+    padding-bottom: 80px;
+  }
+  @media (max-width: $s-end) {
+    padding-top: 51px;
+    padding-bottom: 62px;
+  }
+
 }
 
 .offer h2 {
@@ -13,6 +23,21 @@
   margin-top: 0;
   padding-left: 8.5%;
   margin-bottom: 53px;
+
+  @media (max-width: $m-end) {
+    padding-left: 0;
+    font-size: 32px;
+    line-height: 140.62%;
+    padding-right: 13%;
+  }
+
+  @media (max-width: $s-end) {
+    font-size: 28px;
+    line-height: 140.62%;
+    padding-left: 10px;
+    padding-right: 0;
+    margin-bottom: 41px;
+  }
 }
 
 .offer__list {
@@ -21,11 +46,41 @@
   margin: 0;
   padding: 0 8.5% 0;
   justify-content: center;
+
+  @media (max-width: $m-end) {
+    padding: 0;
+  }
+
+  @media (max-width: $s-end) {
+
+  }
+}
+
+.offer__item p {
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 30px;
+  margin-top: 49px;
+  margin-bottom: 0;
+  margin-left: 12%;
+
+  @media (max-width: $m-end) {
+    margin-top: 39px;
+    margin-left: 6%;
+  }
+
+  @media (max-width: $s-end) {
+    font-size: 20px;
+    line-height: 30px;
+    margin-top: 20px;
+    margin-left: 12%;
+  }
 }
 
 .offer__item {
   list-style: none;
-  flex: 0 1 370px;
+  flex: 0 0 31.6%;
+  min-width: 320px;
   background-size: cover;
   min-height: 620px;
   position: relative;
@@ -38,26 +93,79 @@
 
   &--production {
     background-image: linear-gradient(rgba($indigo, 0.8)), url("../img/production.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: linear-gradient(rgba($indigo, 0.8)), url("../img/production2x.jpg");
+    }
   }
 
   &--installation {
     background-image: linear-gradient(rgba($indigo, 0.8)), url("../img/mounting.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: linear-gradient(rgba($indigo, 0.8)), url("../img/mounting2x.jpg");
+    }
   }
 
   &--light {
     background-image: linear-gradient(rgba($indigo, 0.8)), url("../img/light.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: linear-gradient(rgba($indigo, 0.8)), url("../img/light2x.jpg");
+    }
+  }
+
+  @media (max-width: $m-end) {
+    flex: 0 0 100%;
+    min-height: 256px;
+    margin-right: 0;
+    margin-bottom: 45px;
+    min-width: auto;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &--production {
+      background-image: linear-gradient(rgba($indigo, 0.8)), url("../img/production-tabl.jpg");
+
+      @media (min-resolution: 2dppx) {
+        background-image: linear-gradient(rgba($indigo, 0.8)), url("../img/production-tabl2x.jpg");
+      }
+    }
+
+    &--installation {
+      background-image: linear-gradient(rgba($indigo, 0.8)), url("../img/mounting-tabl.jpg");
+
+      @media (min-resolution: 2dppx) {
+        background-image: linear-gradient(rgba($indigo, 0.8)), url("../img/mounting-tabl2x.jpg");
+      }
+    }
+
+    &--light {
+      background-image: linear-gradient(rgba($indigo, 0.8)), url("../img/light-tabl.jpg");
+
+      @media (min-resolution: 2dppx) {
+        background-image: linear-gradient(rgba($indigo, 0.8)), url("../img/light-tabl2x.jpg");
+      }
+
+      p {
+        margin-top: 52px;
+      }
+    }
+  }
+
+  @media (max-width: $s-end) {
+    margin-bottom: 31px;
+
+    &--light{
+      p{
+        margin-top: 28px;
+      }
+    }
   }
 }
 
-.offer__item p {
-  font-weight: normal;
-  font-size: 20px;
-  line-height: 30px;
-  margin-top: 49px;
-  margin-bottom: 0;
-  margin-left: 12%;
-
-}
 
 .offer__link {
   position: absolute;
@@ -66,6 +174,13 @@
   z-index: 1;
   top: 0;
   left: 0;
+  @media (max-width: $m-end) {
+
+  }
+
+  @media (max-width: $s-end) {
+
+  }
 }
 
 .offer span {
