@@ -1,0 +1,54 @@
+.about {
+  color: $gray;
+  padding: 76px 9.28% 15px 300px;
+  position: relative;
+
+  &::before{
+    @include pseudo();
+    @include size(160px, 313px);
+    background-image: url("../img/year.png");
+    background-repeat: no-repeat;
+    left: 92px;
+    top: 81px;
+  }
+}
+
+.about h2 {
+  font-family: $roboto;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 51px;
+  margin-top: 0;
+  margin-bottom: 23px;
+}
+
+.about p {
+  font-family: $mono;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  margin-top: 0;
+
+  &:nth-of-type(1n){
+    margin-bottom: 20px;
+  }
+  &:nth-of-type(2n){
+    margin-bottom: 38px;
+  }
+}
+
+.about__excerpt{
+  display: block;
+  width: 180px;
+  border: 1px solid $blue;
+  font-family: $roboto;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $blue;
+  border-radius: 5px;
+  padding: 13px 0;
+}

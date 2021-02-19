@@ -32,6 +32,7 @@
   flex: 0 1 48.8%;
   padding: 97px 38px 65px 43px;
   margin-bottom: 29px;
+  cursor: pointer;
 
   &::before {
     @include pseudo();
@@ -43,7 +44,7 @@
 
   &--confidentiality,
   &--price {
-    padding-bottom: 76px;
+    padding-bottom: 86px;
   }
 
   &:hover {
