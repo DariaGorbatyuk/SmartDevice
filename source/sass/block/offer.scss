@@ -115,6 +115,13 @@
     }
   }
 
+  &:hover,
+  &:focus-within {
+    outline: none;
+    transform: scale(1.05);
+    transition: transform 300ms ease-in;
+  }
+
   @media (max-width: $m-end) {
     flex: 0 0 100%;
     min-height: 256px;
@@ -158,8 +165,8 @@
   @media (max-width: $s-end) {
     margin-bottom: 31px;
 
-    &--light{
-      p{
+    &--light {
+      p {
         margin-top: 28px;
       }
     }
@@ -174,12 +181,9 @@
   z-index: 1;
   top: 0;
   left: 0;
-  @media (max-width: $m-end) {
 
-  }
-
-  @media (max-width: $s-end) {
-
+  &:focus {
+    outline: none;
   }
 }
 
