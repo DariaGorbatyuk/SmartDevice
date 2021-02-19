@@ -1,4 +1,4 @@
-.question{
+.question {
   background-color: $blue;
   color: $white;
   background-image: url("../img/plain-grop.png");
@@ -6,27 +6,67 @@
   background-position: right;
   padding-bottom: 113px;
   padding-top: 90px;
+
+  @media (max-width: $m-end) {
+    background-image: none;
+    padding-top: 79px;
+    padding-bottom: 104px;
+  }
 }
-.question__layout{
-  margin-left: 50.9%;
-  padding-right: 117px;
+
+.question__container {
+  display: flex;
+  justify-content: space-between;
 }
-.question h2{
+
+.question__half {
+  flex: 0 1 719px;
+  @media (max-width: $m-end) {
+    display: none;
+  }
+}
+
+.question__layout {
+  padding-right: 8.3%;
+  min-width: 570px;
+  flex: 1 0 691px;
+
+  @media (max-width: $m-end) {
+    padding: 0;
+    width: 591px;
+    margin: 0 auto;
+    flex: 0 0 auto;
+  }
+}
+
+.question h2 {
   font-family: $roboto;
   font-weight: normal;
   font-size: 36px;
   line-height: 51px;
   margin: 0;
   margin-bottom: 11px;
+
+  @media (max-width: $m-end) {
+    font-size: 32px;
+    line-height: 140.62%;
+    margin-bottom: 18px;
+  }
 }
-.question p{
+
+.question p {
   font-family: $mono;
   font-weight: normal;
   font-size: 16px;
   line-height: 22px;
   margin: 0;
   margin-bottom: 51px;
+
+  @media (max-width: $m-end) {
+    margin-bottom: 54px;
+  }
 }
-.question__form{
+
+.question__form {
 
 }

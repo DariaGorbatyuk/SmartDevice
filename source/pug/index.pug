@@ -90,7 +90,8 @@ html(lang="ru")
                 a.offer__link(aria-label="Подробнее" href="#")
                 span
       section.question
-        div.container
+        div.container.question__container
+          div.question__half
           div.question__layout
             h2 Остались вопросы? Задайте их нам!
             p Мы проконсультируем Вас бесплатно
@@ -107,7 +108,9 @@ html(lang="ru")
               div.form-question__btns
                 div.form-question__check
                   input#agree.visually-hidden(type="checkbox" name="agree" checked)
-                  label(for="agree") Я согласен на обработку  персональных данных
+                  label(for="agree") Я согласен на обработку
+                    br
+                    | персональных данных
                 button.form-question__btn(type="submit") Задать вопрос
     footer.footer
       div.container

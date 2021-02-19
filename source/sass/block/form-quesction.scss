@@ -1,5 +1,4 @@
 .form-question {
-
   input,
   textarea {
     font-family: $mono;
@@ -14,6 +13,10 @@
       color: inherit;
       font-family: inherit;
     }
+  }
+
+  @media (max-width: $m-end) {
+
   }
 }
 
@@ -31,6 +34,12 @@
     width: 272px;
     padding: 12px 10px 16px 18px;
   }
+
+  @media (max-width: $m-end) {
+    input {
+      width: 280px;
+    }
+  }
 }
 
 
@@ -43,12 +52,24 @@
     resize: none;
     padding: 11px 10px 10px 19px;
   }
+
+  @media (max-width: $m-end) {
+    margin-bottom: 42px;
+    textarea{
+      width: 591px;
+      height: 160px;
+    }
+  }
 }
 
 
 .form-question__btns {
   display: flex;
   justify-content: space-between;
+
+  @media (max-width: $m-end) {
+
+  }
 }
 
 .form-question__check {
@@ -58,6 +79,7 @@
   line-height: 16px;
   opacity: 0.8;
   margin-top: 8px;
+  flex-basis: 50%;
 
   label {
     display: block;
@@ -81,6 +103,10 @@
     left: 6px;
     top: 5px;
   }
+
+  @media (max-width: $m-end) {
+
+  }
 }
 
 .form-question__btn {
@@ -94,11 +120,15 @@
   border: 1px solid $white;
   background-color: transparent;
   flex: 0 0 272px;
-  //width: 272px;
   color: inherit;
   order: -1;
   border-radius: 5px;
   padding-bottom: 14px;
   padding-top: 14px;
   margin-right: 36px;
+
+  @media (max-width: $m-end) {
+    flex-basis: 279px;
+    margin-right: 40px;
+  }
 }
