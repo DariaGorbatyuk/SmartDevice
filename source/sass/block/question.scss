@@ -1,0 +1,32 @@
+.question{
+  background-color: $blue;
+  color: $white;
+  background-image: url("../img/plain-grop.png");
+  background-repeat: no-repeat;
+  background-position: right;
+  padding-bottom: 113px;
+  padding-top: 90px;
+}
+.question__layout{
+  margin-left: 50.9%;
+  padding-right: 117px;
+}
+.question h2{
+  font-family: $roboto;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 51px;
+  margin: 0;
+  margin-bottom: 11px;
+}
+.question p{
+  font-family: $mono;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  margin: 0;
+  margin-bottom: 51px;
+}
+.question__form{
+
+}

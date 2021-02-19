@@ -90,24 +90,25 @@ html(lang="ru")
                 a.offer__link(aria-label="Подробнее" href="#")
                 span
       section.question
-        h2 Остались вопросы? Задайте их нам!
-        p Мы проконсультируем Вас бесплатно
-        form.question__form.form-question
-          div.form-question__inputs
-            div.form-question__inp
-              label.visually-hidden(for="name") Имя
-              input#name(type="text" name="name" placeholder="Имя")
-            div.form-question__inp
-              label.visually-hidden(for="tel") Телефон
-              input#tel(type="tel" name="tel" placeholder="Телефон")
-          div.form-question__text
-            label.visually-hidden(for="text") Ваш вопрос
-            textarea#text Ваш вопрос
-          div.form-question__btns
-            div.form-question__check
-              input#agree(type="checkbox" name="agree" checked)
-              label(for="agree") Я согласен на обработку  персональных данных
-            button.form-question__btn(type="submit") Задать вопрос
+        div.container
+          div.question__layout
+            h2 Остались вопросы? Задайте их нам!
+            p Мы проконсультируем Вас бесплатно
+            form.question__form.form-question
+              div.form-question__inp
+                label.visually-hidden(for="name") Имя
+                input#name(type="text" name="name" placeholder="Имя")
+              div.form-question__inp
+                label.visually-hidden(for="tel") Телефон
+                input#tel(type="tel" name="tel" placeholder="Телефон")
+              div.form-question__text
+                label.visually-hidden(for="text") Ваш вопрос
+                textarea#text Ваш вопрос
+              div.form-question__btns
+                div.form-question__check
+                  input#agree.visually-hidden(type="checkbox" name="agree" checked)
+                  label(for="agree") Я согласен на обработку  персональных данных
+                button.form-question__btn(type="submit") Задать вопрос
     footer.footer
       div.container
         div.footer__top

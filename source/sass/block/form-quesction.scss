@@ -1,0 +1,104 @@
+.form-question {
+
+  input,
+  textarea {
+    font-family: $mono;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: $white;
+    background-color: rgba($white, 0.1);
+    border: 0;
+
+    &::placeholder {
+      color: inherit;
+      font-family: inherit;
+    }
+  }
+}
+
+
+.form-question__inp {
+  display: inline-block;
+  margin-right: 21px;
+  margin-bottom: 40px;
+
+  &:nth-of-type(2n) {
+    margin-right: 0;
+  }
+
+  input {
+    width: 272px;
+    padding: 12px 10px 16px 18px;
+  }
+}
+
+
+.form-question__text {
+  margin-bottom: 38px;
+
+  textarea {
+    width: 570px;
+    height: 154px;
+    resize: none;
+    padding: 11px 10px 10px 19px;
+  }
+}
+
+
+.form-question__btns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-question__check {
+  font-family: $mono;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  opacity: 0.8;
+  margin-top: 8px;
+
+  label {
+    display: block;
+    padding-left: 36px;
+    position: relative;
+
+    &::before {
+      @include pseudo();
+      @include square(16px);
+      background-color: transparent;
+      border: 1px solid $white;
+      left: 2px;
+    }
+  }
+
+  input:checked ~ label::after {
+    @include pseudo();
+    @include size(8px, 5px);
+    background-image: url("../img/check.svg");
+    background-repeat: no-repeat;
+    left: 6px;
+    top: 5px;
+  }
+}
+
+.form-question__btn {
+  font-family: $roboto;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border: 1px solid $white;
+  background-color: transparent;
+  flex: 0 0 272px;
+  //width: 272px;
+  color: inherit;
+  order: -1;
+  border-radius: 5px;
+  padding-bottom: 14px;
+  padding-top: 14px;
+  margin-right: 36px;
+}
