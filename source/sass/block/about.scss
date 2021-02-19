@@ -30,6 +30,13 @@
       top: 25px;
     }
   }
+
+  @media (max-width: $s-end) {
+    padding: 40px 0 10px 2px;
+    &::before{
+      display: none;
+    }
+  }
 }
 
 .about h2 {
@@ -43,6 +50,12 @@
   @media (max-width: $m-end) {
     font-size: 32px;
     line-height: 140.62%; //45
+  }
+
+  @media (max-width: $s-end) {
+    font-size: 28px;
+    line-height: 140.62%;
+    margin-bottom: 20px;
   }
 }
 
@@ -65,11 +78,22 @@
       margin-bottom: 43px;
     }
   }
+  @media (max-width: $s-end) {
+    &:nth-of-type(1n){
+      margin-bottom: 39px;
+    }
+    &:nth-of-type(2n){
+      margin-bottom: 30px;
+    }
+  }
 }
 
 .about span{
   &:nth-of-type(1n){
     display: none;
+  }
+  &:nth-of-type(2n){
+    display: inline;
   }
 
   @media (max-width: $m-end) {
@@ -97,7 +121,14 @@
   border-radius: 5px;
   padding: 13px 0;
 
-  @media (max-width: $m-end) {
-
+  &:hover,
+  &:focus{
+    outline: none;
+    color: $white;
+    box-shadow: inset 180px 0 0 $blue;
+    transition: box-shadow 600ms ease-in 50ms, color 300ms linear;
+  }
+  &:active {
+    color: rgba($white, 0.7);
   }
 }
