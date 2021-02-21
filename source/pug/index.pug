@@ -104,7 +104,7 @@ html(lang="ru")
                 input#tel(type="tel" name="tel" placeholder="Телефон")
               div.form-question__text
                 label.visually-hidden(for="text") Ваш вопрос
-                textarea(placeholder="Ваш вопрос")
+                textarea#text(placeholder="Ваш вопрос")
               div.form-question__btns
                 div.form-question__check
                   input#agree.visually-hidden(type="checkbox" name="agree" checked)
@@ -113,28 +113,32 @@ html(lang="ru")
     footer.footer
       div.container
         div.footer__top
-          div.footer__socials.socials
-            a(href="#")
-              img(src="./img/icon-logo.svg")
-            ul.socials__list
+          div.footer__left
+            a.footer__logo(href="#")
+              svg(width="216" height="52")
+                use(xlink:href="./img/sprite.svg#icon-footer-logo")
+            ul.footer__socials.socials
               li.socials__item
                 a(href="#")
-                  img(src="./img/icon-f.svg")
+                  svg(width="27" height="27")
+                    use(xlink:href="./img/sprite.svg#icon-f")
               li.socials__item
                 a(href="#")
-                  img(src="./img/icon-o.svg")
+                  svg(width="27" height="27")
+                    use(xlink:href="./img/sprite.svg#icon-o")
               li.socials__item
                 a(href="#")
-                  img(src="./img/icon-vk.svg")
-          div.footer__nav.footer-nav
-            details
+                  svg(width="27" height="27")
+                    use(xlink:href="./img/sprite.svg#icon-vk")
+          div.footer__nav
+            details(open)
               summary Разделы сайта
-              ul.footer-nav__list
+              ul.footer__nav-list
                 each name in ['О компании', 'Продукты', 'Производство печатных плат', 'Монтаж печатных плат', 'Комплектующие', 'Доставка', "Контакты"]
-                  li.footer-nav__item
-                    a(href="#")= name
+                  li.footer__nav-item
+                    a.footer__nav-link(href="#")= name
           div.footer__contacts
-            details
+            details(open)
               summary Наш офис
               address
                 p г. Мытищи, Олимпийский проспект, д.10
@@ -144,5 +148,5 @@ html(lang="ru")
         div.footer__bottom
           p Все права защищены
           span 1999-2018 SD Service Devices
-          a.footer__copyright Условия конфиденциальности
-          a.footer__developed Developed by wow studio
+          a.footer__copyright(href="#") Условия конфиденциальности
+          a.footer__developed(href="#") Developed by wow studio

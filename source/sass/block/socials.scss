@@ -1,0 +1,15 @@
+.socials{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+.socials__item{
+  list-style: none;
+  margin-right: 13px;
+  margin-bottom: 10px;
+
+  &:last-child{
+    margin-right: 0;
+  }
+}
