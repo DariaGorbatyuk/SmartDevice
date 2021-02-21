@@ -2,6 +2,11 @@
   padding-top: 64px;
   padding-bottom: 15px;
   overflow-x: hidden;
+  position: relative;
+
+  @media (max-width: $m-end) {
+    padding-top: 19px;
+  }
 }
 
 .footer__top {
@@ -19,17 +24,52 @@
     height: 1px;
     background-color: $light-gray;
   }
+
+  @media (max-width: $m-end) {
+    padding-bottom: 36px;
+  }
 }
 
 .footer__left {
   margin-right: auto;
   margin-bottom: 10px;
   padding-right: 20px;
+
+  @media (max-width: $m-end) {
+    flex: 0 0 100%;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 0;
+    padding-bottom: 20px;
+    align-items: center;
+    position: relative;
+
+    &::after{
+      @include  pseudo();
+      width: 200%;
+      height: 1px;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 0;
+      background-color: $light-gray;
+    }
+  }
 }
 
 .footer__logo {
   display: block;
   margin-bottom: 49px;
+  @media (max-width: $m-end) {
+    margin-bottom: 0;
+  }
+}
+
+.footer__socials {
+  @media (max-width: $m-end) {
+    margin-top: 11px;
+    max-width: 147px;
+  }
 }
 
 .footer summary {
@@ -58,21 +98,34 @@
 .footer__nav {
   flex: 0 0 450px;
   margin-right: 14.7%;
+
+  @media (max-width: $m-end) {
+    flex: 0 0 50%;
+    margin: 0;
+    margin-top: 40px;
+  }
 }
 
 .footer__nav-list {
-  //columns: 291px 2;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-
   max-height: 100px;
   margin: 0;
   padding: 0;
+
+  @media (max-width: $m-end) {
+    flex-direction: row;
+    max-height: fit-content;
+  }
 }
 
 .footer__nav-item {
   list-style: none;
+
+  @media (max-width: $m-end) {
+    flex-basis: 100%;
+  }
 }
 
 .footer__nav-link,
@@ -85,6 +138,14 @@
   line-height: 25px;
   color: $indigo;
   opacity: 0.5;
+}
+
+.footer__contacts {
+  @media (max-width: $m-end) {
+    flex: 0 0 50%;
+    margin-top: 40px;
+    padding-left: 16px;
+  }
 }
 
 .footer__contacts p {
@@ -114,11 +175,33 @@
     margin: 0;
     margin-right: 5%;
   }
-  span{
+
+  span {
     margin-right: 10.3%;
   }
+  @media (max-width: $m-end) {
+    justify-content: space-between;
+    padding: 21px 0 9px;
 
-  .footer__copyright{
-    margin-right: 28.3%;
+    p {
+      display: none;
+    }
+    span {
+      position: absolute;
+      top: 36px;
+      left: 42.5%;
+      margin: 0;
+      max-width: 233px;
+      max-height: 70px;
+      overflow: hidden;
+    }
+  }
+}
+
+.footer__copyright {
+  margin-right: 28.3%;
+  @media (max-width: $m-end) {
+    margin-right: 0;
+    padding-right: 10px;
   }
 }
