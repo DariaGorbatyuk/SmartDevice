@@ -132,14 +132,14 @@ html(lang="ru")
                     use(xlink:href="./img/sprite.svg#icon-vk")
           div.footer__nav
             details(open)
-              summary Разделы сайта
+              summary.footer__sum Разделы сайта
               ul.footer__nav-list
                 each name in ['О компании', 'Продукты', 'Производство печатных плат', 'Монтаж печатных плат', 'Комплектующие', 'Доставка', "Контакты"]
                   li.footer__nav-item
                     a.footer__nav-link(href="#")= name
           div.footer__contacts
             details(open)
-              summary Наш офис
+              summary.footer__sum Наш офис
               address
                 p г. Мытищи, Олимпийский проспект, д.10
                 a(href="tel:+74955894050") +7 (495) 589-40-50

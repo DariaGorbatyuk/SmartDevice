@@ -3,6 +3,10 @@
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
+
+  @media (max-width: $s-end) {
+    justify-content: center;
+  }
 }
 .socials__item{
   list-style: none;
