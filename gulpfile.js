@@ -1,7 +1,6 @@
 "use strict";
 
 var gulp = require("gulp");
-var pug = require('gulp-pug');
 var plumber = require("gulp-plumber");
 var sourcemap = require("gulp-sourcemaps");
 var sass = require("gulp-sass");
@@ -42,8 +41,6 @@ gulp.task("server", function () {
 
   gulp.watch("source/sass/**/*.{scss,sass}", gulp.series("css"));
   gulp.watch("source/img/icon-*.svg", gulp.series("sprite", "html", "refresh"));
-  gulp.watch("source/pug/index.pug", gulp.series("pug", "html", "refresh"));
-  gulp.watch("source/js/*.js", gulp.series("copy", "refresh"));
 });
 
 gulp.task("refresh", function (done) {
@@ -106,20 +103,10 @@ gulp.task("copy", function () {
     .pipe(gulp.dest("build"));
 });
 
-gulp.task("pug", function () {
-  gulp.src('source/pug/*.pug')
-    .pipe(pug({pretty: '\t'}))
-    .pipe(gulp.dest('build'))
-});
-gulp.task('pug', function buildHTML() {
-  return gulp.src('source/pug/*.pug')
-    .pipe(pug({pretty: '\t'}))
-    .pipe(gulp.dest('source'))
-});
 gulp.task("clean", function () {
   return del("build");
 });
 
-gulp.task("build", gulp.series("clean","pug", "copy", "css", "sprite", "html"));
+gulp.task("build", gulp.series("clean", "copy", "css", "sprite", "html"));
 // gulp.task("build", gulp.series("clean", "copy", "css", "sprite", "html"));
 gulp.task("start", gulp.series("build", "server"));
