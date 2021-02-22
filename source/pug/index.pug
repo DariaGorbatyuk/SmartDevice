@@ -100,13 +100,13 @@ html(lang="ru")
             form.question__form.form-question
               div.form-question__inp
                 label.visually-hidden(for="name") Имя
-                input#name(type="text" name="name" placeholder="Имя")
+                input#name(type="text" name="name" placeholder="Имя" required)
               div.form-question__inp
                 label.visually-hidden(for="tel") Телефон
-                input#tel(type="tel" name="tel" placeholder="Телефон")
+                input#tel(type="tel" name="tel" placeholder="Телефон" maxlength="14" required)
               div.form-question__text
                 label.visually-hidden(for="text") Ваш вопрос
-                textarea#text(placeholder="Ваш вопрос")
+                textarea#text(placeholder="Ваш вопрос" required)
               div.form-question__btns
                 div.form-question__check
                   input#agree.visually-hidden(type="checkbox" name="agree" checked)

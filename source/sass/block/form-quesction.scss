@@ -110,8 +110,11 @@
 .form-question__btns {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
-  //!!!!!!!!!!!
+
+  &--m {
+    flex-wrap: wrap;
+  }
+
   @media (max-width: $s-end) {
     flex-wrap: wrap;
   }
@@ -156,7 +159,7 @@
   &--m {
     flex: 0 0 100%;
 
-    label{
+    label {
       padding: 0 43px 0 50px;
     }
   }

@@ -3,7 +3,8 @@ const body = document.querySelector('body');
 const modalTemplate = document.querySelector('#modal').content.querySelector('.modal');
 const newModal = modalTemplate.cloneNode(true);
 const openModalBtn = body.querySelector('.header__link-modal');
-const form = newModal.querySelector('.modal__form');
+const modalForm = newModal.querySelector('.modal__form');
+// const questionsForm = document.querySelector('.question__form ');
 
 let isStorageSupport = true;
 let storageSupportName;
@@ -75,4 +76,4 @@ function onTelChange(event) {
 }
 
 openModalBtn.addEventListener('click', onOpenModal);
-form.addEventListener('submit', onFormSubmit)
+modalForm.addEventListener('submit', onFormSubmit)
