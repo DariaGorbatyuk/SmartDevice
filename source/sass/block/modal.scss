@@ -1,0 +1,44 @@
+.modal {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-color: rgba($black, 0.5);
+  color: $white;
+}
+
+.modal__box {
+  width: 490px;
+  background-color: $blue;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: auto;
+}
+
+.modal h2 {
+  font-family: $roboto;
+  font-weight: normal;
+  font-size: 28px;
+  line-height: 140.62%;
+  margin: 0;
+}
+
+.modal p {
+  font-family: $mono;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  margin: 0;
+}
+
+.modal__close {
+  @include square(17px);
+  border: 0;
+  background-color: red;
+}

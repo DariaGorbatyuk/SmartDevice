@@ -43,6 +43,7 @@ gulp.task("server", function () {
   gulp.watch("source/sass/**/*.{scss,sass}", gulp.series("css"));
   gulp.watch("source/img/icon-*.svg", gulp.series("sprite", "html", "refresh"));
   gulp.watch("source/pug/index.pug", gulp.series("pug", "html", "refresh"));
+  gulp.watch("source/js/*.js", gulp.series("copy", "refresh"));
 });
 
 gulp.task("refresh", function (done) {

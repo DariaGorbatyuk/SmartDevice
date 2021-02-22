@@ -123,7 +123,7 @@
   }
 }
 
-.header__call-btn {
+.header__link-modal {
   font-family: $roboto;
   font-weight: bold;
   font-size: 14px;
@@ -234,7 +234,7 @@
   }
 }
 
-.header__link-modal {
+.header__call-btn {
   width: 407px;
   background-color: $blue;
   font-family: $roboto;
@@ -272,13 +272,13 @@
   }
 }
 
-.header__link-modal span {
+.header__call-btn span {
   @media (max-width: $s-end) {
     display: none;
   }
 }
 
-.header__link-modal p {
+.header__call-btn p {
   display: none;
   margin: 0;
 

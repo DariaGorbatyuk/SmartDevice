@@ -1,15 +1,27 @@
 'use strict';
-var pageHeader = document.querySelector('.page-header');
-var headerToggle = document.querySelector('.page-header__toggle');
+const body = document.querySelector('body');
+const modalTemplate = document.querySelector('#modal').content.querySelector('.modal');
+const newModal = modalTemplate.cloneNode(true);
+//const closeModalBtn = newModal.querySelector('.modal__close');
+const openModalBtn = body.querySelector('.header__link-modal');
 
-pageHeader.classList.remove('page-header--nojs');
-
-headerToggle.addEventListener('click', function () {
-  if (pageHeader.classList.contains('page-header--closed')) {
-    pageHeader.classList.remove('page-header--closed');
-    pageHeader.classList.add('page-header--opened');
-  } else {
-    pageHeader.classList.add('page-header--closed');
-    pageHeader.classList.remove('page-header--opened');
+function onCloseModal(evt) {
+  evt.preventDefault();
+  console.log(evt.target);
+  if (evt.key !== 'Escape' && !evt.target.classList.contains('modal__close') && !evt.target.classList.contains('modal')) {
+    return;
   }
-});
+  newModal.remove();
+}
+
+function onOpenModal(evt) {
+  evt.preventDefault();
+  body.insertAdjacentElement('afterbegin', newModal);
+  newModal.querySelector('.modal__close').addEventListener('click', onCloseModal);
+  document.addEventListener('keydown', onCloseModal);
+  newModal.addEventListener('click',onCloseModal)
+}
+
+
+openModalBtn.addEventListener('click', onOpenModal);
+

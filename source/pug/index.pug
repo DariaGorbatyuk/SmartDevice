@@ -26,11 +26,11 @@ html(lang="ru")
                   svg.header__icon.header__icon--tel(width="18" height="18" role="img" aria-label="Телефон")
                     use(xlink:href="./img/sprite.svg#icon-phone")
                   span +7 (495) 000 52 52
-          a.header__call-btn(href="#") Заказать звонок
+          a.header__link-modal(href="#") Заказать звонок
         div.header__bottom
           h1 Печатные платы
           b производство и монтаж, поставка комплектующих, блоков и модулей
-          a.header__link-modal(href="#question")
+          a.header__call-btn(href="#question")
             span Получить бесплатную консультацию
             p Бесплатная консультация
           a.header__scroll(href="#features") Скролл вниз
@@ -150,3 +150,25 @@ html(lang="ru")
           span 1999-2018 SD Service Devices
           a.footer__copyright(href="#") Условия конфиденциальности
           a.footer__developed(href="#") Developed by wow studio
+    template#modal
+      section.modal
+        div.modal__box
+          h2 Закажите звонок
+          p Оставьте контакты, мы проконсультируем вас бесплатно в удобное время
+          button.modal__close(type="button")
+          form.modal__form.form-question.form-question--modal
+            div.form-question__inp
+              label.visually-hidden(for="name-m") Имя
+              input#name-m(type="text" name="name" placeholder="Имя")
+            div.form-question__inp
+              label.visually-hidden(for="tel-m") Телефон
+              input#tel-m(type="tel" name="tel" placeholder="Телефон")
+            div.form-question__text
+              label.visually-hidden(for="text-m") Ваш вопрос
+              textarea#text-m(placeholder="Ваш вопрос")
+            div.form-question__btns
+              div.form-question__check
+                input#agree-m.visually-hidden(type="checkbox" name="agree" checked)
+                label(for="agree-m") Я согласен на обработку персональных данных
+              button.form-question__btn(type="submit") Отправить
+    script(src="./js/script.js")
