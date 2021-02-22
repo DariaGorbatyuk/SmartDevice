@@ -1,15 +1,14 @@
 .about {
   color: $gray;
   position: relative;
-  padding: 76px 9.28% 111px 300px;
-  background-color: $white;
+  padding: 76px 0 111px 179px;
 
   &::before{
     @include pseudo();
     @include size(160px, 313px);
     background-image: url("../img/year.png");
     background-repeat: no-repeat;
-    left: 92px;
+    left: -28px;
     top: 81px;
 
     @media (min-resolution: 2dppx) {

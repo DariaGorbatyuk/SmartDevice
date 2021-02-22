@@ -1,8 +1,12 @@
-.container{
+.container {
   max-width: $l-end;
   min-width: $small;
   padding: 0 1.57%;
   margin: 0 auto;
+
+  &--big {
+    padding: 0 7.9%;
+  }
 
   @media (max-width: $m-end) {
     width: 100%;
