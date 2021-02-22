@@ -3,6 +3,20 @@ const body = document.querySelector('body');
 const modalTemplate = document.querySelector('#modal').content.querySelector('.modal');
 const newModal = modalTemplate.cloneNode(true);
 const openModalBtn = body.querySelector('.header__link-modal');
+const form = newModal.querySelector('.modal__form');
+
+let isStorageSupport = true;
+let storageSupportName;
+let storageSupportTel;
+let storageSupportMessage;
+
+try {
+  storageSupportName = localStorage.getItem('name');
+  storageSupportTel = localStorage.getItem('tel');
+  storageSupportMessage = localStorage.getItem('message');
+} catch (err) {
+  isStorageSupport = false;
+}
 
 function onCloseModal(evt) {
   if (evt.key !== 'Escape' && !evt.target.classList.contains('modal__close') && !evt.target.classList.contains('modal')) {
@@ -21,9 +35,24 @@ function onOpenModal(evt) {
   newModal.addEventListener('click', onCloseModal);
   const name = newModal.querySelector('#name-m');
   const tel = newModal.querySelector('#tel-m');
+  const message = newModal.querySelector('#text-m');
   name.focus();
+  if(isStorageSupport){
+    name.value = storageSupportName;
+    tel.value = storageSupportTel;
+    message.value = storageSupportMessage;
+  }
 }
 
+function onFormSubmit(evt) {
+  evt.preventDefault();
+  if (isStorageSupport) {
+    localStorage.setItem('name', newModal.querySelector(`#name-m`).value);
+    localStorage.setItem('tel', newModal.querySelector(`#tel-m`).value);
+    localStorage.setItem('message', newModal.querySelector(`#text-m`).value);
+  }
+  newModal.remove();
+}
 
 openModalBtn.addEventListener('click', onOpenModal);
-
+form.addEventListener('submit', onFormSubmit)

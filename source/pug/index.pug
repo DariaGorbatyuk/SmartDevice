@@ -161,13 +161,13 @@ html(lang="ru")
           form.modal__form.form-question.form-question--m
             div.form-question__inp.form-question__inp--m
               label.visually-hidden(for="name-m") Имя
-              input#name-m(type="text" name="name" placeholder="Имя")
+              input#name-m(type="text" name="name" placeholder="Имя" required)
             div.form-question__inp.form-question__inp--m
               label.visually-hidden(for="tel-m") Телефон
-              input#tel-m(type="tel" name="tel" placeholder="Телефон")
+              input#tel-m(type="tel" name="tel" placeholder="Телефон" required)
             div.form-question__text.form-question__text--m
               label.visually-hidden(for="text-m") Ваш вопрос
-              textarea#text-m(placeholder="Ваш вопрос")
+              textarea#text-m(placeholder="Ваш вопрос" required)
             div.form-question__btns.form-question__btns--m
               div.form-question__check.form-question__check--m
                 input#agree-m.visually-hidden(type="checkbox" name="agree" checked)
