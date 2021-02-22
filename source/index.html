@@ -17,11 +17,13 @@
 					<nav class="header__nav">
 						<ul class="header__nav-list">
 							<li class="header__nav-item"><a class="header__nav-link" href="maltio: info@sd.ru">
-									<svg class="header__icon" width="19" height="14" role="img" aria-label="Почта">
+									<svg class="header__icon" width="19" height="14" role="img">
+										<title>Почта</title>
 										<use xlink:href="./img/sprite.svg#icon-email"></use>
 									</svg><span>info@sd.ru</span></a></li>
 							<li class="header__nav-item"><a class="header__nav-link" href="tel:+74950005252">
-									<svg class="header__icon header__icon--tel" width="18" height="18" role="img" aria-label="Телефон">
+									<svg class="header__icon header__icon--tel" width="18" height="18" role="img">
+										<title>Телефон</title>
 										<use xlink:href="./img/sprite.svg#icon-phone"></use>
 									</svg><span>+7 (495) 000 52 52</span></a></li>
 						</ul>
@@ -174,26 +176,26 @@
 				<div class="modal__box">
 					<h2>Закажите звонок</h2>
 					<p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
-					<button class="modal__close" type="button"></button>
-					<form class="modal__form form-question form-question--modal">
-						<div class="form-question__inp">
+					<button class="modal__close" type="button" aria-label="Закрыть модальное окно"></button>
+					<form class="modal__form form-question form-question--m">
+						<div class="form-question__inp form-question__inp--m">
 							<label class="visually-hidden" for="name-m">Имя</label>
 							<input id="name-m" type="text" name="name" placeholder="Имя">
 						</div>
-						<div class="form-question__inp">
+						<div class="form-question__inp form-question__inp--m">
 							<label class="visually-hidden" for="tel-m">Телефон</label>
 							<input id="tel-m" type="tel" name="tel" placeholder="Телефон">
 						</div>
-						<div class="form-question__text">
+						<div class="form-question__text form-question__text--m">
 							<label class="visually-hidden" for="text-m">Ваш вопрос</label>
 							<textarea id="text-m" placeholder="Ваш вопрос"></textarea>
 						</div>
-						<div class="form-question__btns">
-							<div class="form-question__check">
+						<div class="form-question__btns form-question__btns--m">
+							<div class="form-question__check form-question__check--m">
 								<input class="visually-hidden" id="agree-m" type="checkbox" name="agree" checked>
 								<label for="agree-m">Я согласен на обработку персональных данных</label>
 							</div>
-							<button class="form-question__btn" type="submit">Отправить</button>
+							<button class="form-question__btn form-question__btn--m" type="submit">Отправить</button>
 						</div>
 					</form>
 				</div>

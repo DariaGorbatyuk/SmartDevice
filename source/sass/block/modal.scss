@@ -1,6 +1,6 @@
 .modal {
   position: fixed;
-  z-index: 1000;
+  z-index: 100;
   top: 0;
   bottom: 0;
   left: 0;
@@ -11,14 +11,20 @@
 }
 
 .modal__box {
-  width: 490px;
-  background-color: $blue;
   position: absolute;
+  width: 490px;
+  padding: 31px 38px 37px;
+  background-color: $blue;
+  z-index: 1;
   left: 0;
   right: 0;
   top: 50%;
   transform: translateY(-50%);
   margin: auto;
+
+  @media (max-width: $s-end) {
+    width: 100%;
+  }
 }
 
 .modal h2 {
@@ -27,6 +33,7 @@
   font-size: 28px;
   line-height: 140.62%;
   margin: 0;
+  margin-bottom: 12px;
 }
 
 .modal p {
@@ -35,10 +42,38 @@
   font-size: 16px;
   line-height: 22px;
   margin: 0;
+  padding-right: 30px;
+  margin-bottom: 30px;
 }
 
 .modal__close {
   @include square(17px);
   border: 0;
-  background-color: red;
+  background-color: transparent;
+  position: absolute;
+  top: 19px;
+  right: 20px;
+  padding: 0;
+
+  &::before,
+  &::after{
+    @include pseudo();
+    width: 17px;
+    height: 1px;
+    background-color: $white;
+    transition: al 300ms;
+  }
+
+  &::before{
+    transform: rotate(45deg);
+  }
+  &::after{
+    transform: rotate(-45deg);
+  }
+
+  &:focus,
+  &:hover{
+    outline: none;
+    transform: scale(1.2);
+  }
 }
