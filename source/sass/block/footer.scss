@@ -4,6 +4,12 @@
   overflow-x: hidden;
   position: relative;
 
+  a:focus,
+  a:hover{
+    outline: none;
+    color: $blue;
+  }
+
   @media (max-width: $m-end) {
     padding-top: 19px;
   }

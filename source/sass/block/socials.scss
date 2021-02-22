@@ -1,4 +1,4 @@
-.socials{
+.socials {
   display: flex;
   flex-wrap: wrap;
   margin: 0;
@@ -8,12 +8,26 @@
     justify-content: center;
   }
 }
-.socials__item{
+
+.socials__item {
   list-style: none;
   margin-right: 13px;
   margin-bottom: 10px;
 
-  &:last-child{
+  &:last-child {
     margin-right: 0;
+  }
+}
+
+.socials__svg {
+  fill: $white-gray;
+}
+
+.socials__link {
+  display: block;
+
+  &:hover svg,
+  &:focus svg {
+    fill: $blue;
   }
 }

@@ -75,10 +75,10 @@ gulp.task("sprite", function () {
   return gulp.src("source/img/{icon-*,htmlacademy*}.svg")
     .pipe(rename({prefix: ''}))
     .pipe(cheerio({
-     /* run: function ($) {
+      run: function ($) {
         $('[fill]').removeAttr('fill');
         $('[stroke]').removeAttr('stroke');
-      },*/
+      },
       parserOptions: {xmlMode: true}
     }))
     .pipe(svgstore({inlineSvg: true}))

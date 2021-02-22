@@ -25,6 +25,7 @@
 
   }
 }
+
 .features__item span {
   font-family: $roboto;
   font-weight: normal;
@@ -65,12 +66,16 @@
     padding-bottom: 86px;
   }
 
+  svg {
+  fill: $blue;
+  }
+
   &:hover {
     background-color: $blue;
     transition: all 700ms ease-in;
 
     svg {
-      stroke: $white;
+      fill: $white;
     }
 
     span,
@@ -133,7 +138,6 @@
 
   }
 }
-
 
 
 .features__item p {

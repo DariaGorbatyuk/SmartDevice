@@ -116,21 +116,20 @@ html(lang="ru")
       div.container
         div.footer__top
           div.footer__left
-            a.footer__logo(href="#")
-              svg(width="216" height="52")
-                use(xlink:href="./img/sprite.svg#icon-footer-logo")
+            a.footer__logo
+              img(src="./img/icon-footer-logo.svg")
             ul.footer__socials.socials
               li.socials__item
-                a(href="#")
-                  svg(width="27" height="27")
+                a.socials__link(href="#")
+                  svg.socials__svg(width="27" height="27")
                     use(xlink:href="./img/sprite.svg#icon-f")
               li.socials__item
-                a(href="#")
-                  svg(width="27" height="27")
+                a.socials__link(href="#")
+                  svg.socials__svg(width="27" height="27")
                     use(xlink:href="./img/sprite.svg#icon-o")
               li.socials__item
-                a(href="#")
-                  svg(width="27" height="27")
+                a.socials__link(href="#")
+                  svg.socials__svg(width="27" height="27")
                     use(xlink:href="./img/sprite.svg#icon-vk")
           div.footer__nav
             details(open)

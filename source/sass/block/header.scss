@@ -106,6 +106,7 @@
 }
 
 .header__icon {
+  fill: $blue;
   @media (max-width: $m-end) {
     @include size(25px, 19px);
 
