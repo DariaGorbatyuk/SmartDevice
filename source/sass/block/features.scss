@@ -1,4 +1,11 @@
-.features {
+.features{
+  background-image: url("../img/triangls-about.png");
+  background-repeat: no-repeat;
+  background-position: center 0%;
+  background-size: 1920px 1347px;
+
+}
+.features__section {
   padding-top: 112px;
 
   @media (max-width: $m-end) {
@@ -16,6 +23,7 @@
   flex-wrap: wrap;
   padding: 0 8.6%;
   justify-content: space-between;
+  background-color: $white;
 
   @media (max-width: $m-end) {
     padding: 0;

@@ -2,6 +2,7 @@
   color: $gray;
   position: relative;
   padding: 76px 9.28% 111px 300px;
+  background-color: $white;
 
   &::before{
     @include pseudo();
