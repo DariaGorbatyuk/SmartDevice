@@ -37,7 +37,9 @@ function onOpenModal(evt) {
   const tel = newModal.querySelector('#tel-m');
   const message = newModal.querySelector('#text-m');
   name.focus();
-  if(isStorageSupport){
+  tel.addEventListener('focus', onTelChange)
+  tel.addEventListener('input', onTelChange);
+  if (isStorageSupport) {
     name.value = storageSupportName;
     tel.value = storageSupportTel;
     message.value = storageSupportMessage;
@@ -52,6 +54,24 @@ function onFormSubmit(evt) {
     localStorage.setItem('message', newModal.querySelector(`#text-m`).value);
   }
   newModal.remove();
+}
+function onTelChange(event) {
+  const template = /^\+7\([0-9]{3}\)[0-9]{7}/;
+  this.addEventListener('keypress', e => {
+    // Отменяем ввод не цифр
+    if (!/\d/.test(e.key))
+      e.preventDefault();
+  });
+  if (this.value.length === 0) {
+    this.value = '+7('
+  } else if (this.value.length === 6) {
+    this.value = `${this.value})`;
+  }
+  if (!template.test(this.value)) {
+    this.setCustomValidity('Пример: +7(9xx)xxxxxxx');
+  } else {
+    this.setCustomValidity('');
+  }
 }
 
 openModalBtn.addEventListener('click', onOpenModal);
