@@ -4,7 +4,8 @@ const modalTemplate = document.querySelector('#modal').content.querySelector('.m
 const newModal = modalTemplate.cloneNode(true);
 const openModalBtn = body.querySelector('.header__link-modal');
 const modalForm = newModal.querySelector('.modal__form');
-// const questionsForm = document.querySelector('.question__form ');
+const questionsForm = document.querySelector('.question__form ');
+const questionsTel = questionsForm.querySelector('#tel');
 
 let isStorageSupport = true;
 let storageSupportName;
@@ -47,8 +48,16 @@ function onOpenModal(evt) {
   }
 }
 
+function checkAgreement() {
+  return document.querySelector('#agree-m').checked;
+
+}
+
 function onFormSubmit(evt) {
   evt.preventDefault();
+  if(!checkAgreement()){
+    return;
+  }
   if (isStorageSupport) {
     localStorage.setItem('name', newModal.querySelector(`#name-m`).value);
     localStorage.setItem('tel', newModal.querySelector(`#tel-m`).value);
@@ -56,6 +65,7 @@ function onFormSubmit(evt) {
   }
   newModal.remove();
 }
+
 function onTelChange(event) {
   const template = /^\+7\([0-9]{3}\)[0-9]{7}/;
   this.addEventListener('keypress', e => {
@@ -77,3 +87,5 @@ function onTelChange(event) {
 
 openModalBtn.addEventListener('click', onOpenModal);
 modalForm.addEventListener('submit', onFormSubmit)
+questionsTel.addEventListener('input', onTelChange);
+questionsTel.addEventListener('focus', onTelChange);
