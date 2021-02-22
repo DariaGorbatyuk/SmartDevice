@@ -2,9 +2,6 @@
   0%{
     top: 0;
   }
-  70%{
-    top: 50%;
-  }
   100%{
     top: 50%;
     transform: translateY(-50%);
@@ -31,7 +28,7 @@
   right: 0;
   margin: auto;
   color: $white;
-  animation: modal 600ms ease-in;
+  animation: modal 300ms ease-in;
   animation-fill-mode: forwards;
 
   @media (max-width: $s-end) {
