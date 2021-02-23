@@ -1,12 +1,14 @@
 @keyframes modal {
-  0%{
+  0% {
     top: 0;
   }
-  100%{
+
+  100% {
     top: 50%;
     transform: translateY(-50%);
   }
 }
+
 .modal {
   position: fixed;
   z-index: 100;
@@ -65,7 +67,7 @@
   padding: 0;
 
   &::before,
-  &::after{
+  &::after {
     @include pseudo();
     width: 17px;
     height: 1px;
@@ -73,15 +75,16 @@
     transition: al 300ms;
   }
 
-  &::before{
+  &::before {
     transform: rotate(45deg);
   }
-  &::after{
+
+  &::after {
     transform: rotate(-45deg);
   }
 
   &:focus,
-  &:hover{
+  &:hover {
     outline: none;
     transform: scale(1.2);
   }

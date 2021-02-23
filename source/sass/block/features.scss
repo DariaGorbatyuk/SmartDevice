@@ -7,6 +7,7 @@
   @media (min-resolution: 2dppx) {
     background-image: url("../img/triangls-about2x.png");
   }
+
   @media (max-width: $m-end) {
     background-image: url("../img/triangls-about-t.png");
     background-size: 559px 873px;
@@ -16,6 +17,7 @@
       background-image: url("../img/triangls-about-t2x.png");
     }
   }
+
   @media (max-width: $s-end) {
     background-position: center 72%;
     background-size: 320px 873px;
@@ -90,10 +92,6 @@
     padding-bottom: 86px;
   }
 
-  svg {
-    fill: $blue;
-  }
-
   &:hover {
     background-color: $blue;
     transition: all 700ms ease-in;
@@ -117,6 +115,7 @@
     &--price {
       padding-bottom: 36px;
     }
+
     &::before {
       width: 2px;
     }
@@ -131,6 +130,7 @@
     &--confidentiality {
       padding-right: 11px;
     }
+
     &--confidentiality {
       padding-bottom: 57px;
       padding-top: 63px;
@@ -139,6 +139,7 @@
         margin-bottom: 18px;
       }
     }
+
     &--price {
       padding-bottom: 18px;
 
@@ -150,15 +151,12 @@
 }
 
 .features__item svg {
+  fill: $blue;
   position: absolute;
   top: 41px;
 
   @media (max-width: $m-end) {
     top: 24px;
-  }
-
-  @media (max-width: $s-end) {
-
   }
 }
 

@@ -56,6 +56,7 @@
       width: 280px;
     }
   }
+
   @media (max-width: $s-end) {
     margin-right: 0;
     width: 100%;
@@ -91,11 +92,13 @@
 
   @media (max-width: $m-end) {
     margin-bottom: 42px;
+
     textarea {
       width: 591px;
       height: 160px;
     }
   }
+
   @media (max-width: $s-end) {
     width: 100%;
     margin-bottom: 25px;
@@ -215,6 +218,7 @@
     flex-basis: 279px;
     margin-right: 40px;
   }
+
   @media (max-width: $s-end) {
     flex-basis: 100%;
     margin-right: 0;

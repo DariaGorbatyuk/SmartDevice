@@ -9,11 +9,11 @@
     padding-top: 48px;
     padding-bottom: 80px;
   }
+
   @media (max-width: $s-end) {
     padding-top: 51px;
     padding-bottom: 62px;
   }
-
 }
 
 .offer h2 {
@@ -49,10 +49,6 @@
 
   @media (max-width: $m-end) {
     padding: 0;
-  }
-
-  @media (max-width: $s-end) {
-
   }
 }
 
@@ -191,8 +187,8 @@
 }
 
 .offer span {
-  display: block;
   @include size(63px, 63px);
+  display: block;
   background-color: $blue;
   background-image: url("../img/icon-arrow.svg");
   background-repeat: no-repeat;

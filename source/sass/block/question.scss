@@ -16,6 +16,7 @@
     padding-top: 79px;
     padding-bottom: 104px;
   }
+
   @media (max-width: $s-end) {
     padding-top: 30px;
     padding-bottom: 40px;
@@ -33,6 +34,7 @@
 
 .question__half {
   flex: 0 1 719px;
+
   @media (max-width: $m-end) {
     display: none;
   }
@@ -50,6 +52,7 @@
     margin: 0 auto;
     flex: 0 0 auto;
   }
+
   @media (max-width: $s-end) {
     min-width: auto;
     width: 100%;
@@ -69,6 +72,7 @@
     line-height: 140.62%;
     margin-bottom: 18px;
   }
+
   @media (max-width: $s-end) {
     font-size: 28px;
     line-height: 140.62%;
@@ -87,6 +91,7 @@
   @media (max-width: $m-end) {
     margin-bottom: 54px;
   }
+
   @media (max-width: $s-end) {
     margin-bottom: 26px;
   }

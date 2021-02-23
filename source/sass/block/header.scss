@@ -49,7 +49,7 @@
     padding-top: 7px;
     flex: 0 0 auto;
 
-    img{
+    img {
       width: 38px;
       height: 38px;
     }
@@ -235,6 +235,7 @@
       top: 16px;
     }
   }
+
   @media (max-width: $s-end) {
     padding: 0 6% 0 17.3%;
     font-size: 16px;
@@ -281,6 +282,7 @@
     margin-left: 15.8%;
     width: 379px;
   }
+
   @media (max-width: $s-end) {
     width: 100%;
     margin: 0;
