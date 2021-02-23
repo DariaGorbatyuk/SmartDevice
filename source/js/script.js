@@ -9,6 +9,12 @@
   const questionsTel = questionsForm.querySelector(`#tel`);
   const questionsName = questionsForm.querySelector(`#name`);
   const questionsMessage = questionsForm.querySelector(`#text`);
+  const detailsNav = document.querySelector(`.footer__nav details`);
+
+
+  if (document.documentElement.clientWidth < 768) {
+    detailsNav.removeAttribute(`open`);
+  }
 
   let isStorageSupport = true;
   let storageSupportName;
@@ -93,10 +99,19 @@
     }
   }
 
+  function onResize() {
+    if (document.documentElement.clientWidth < 768) {
+      detailsNav.removeAttribute(`open`);
+    } else {
+      detailsNav.setAttribute(`open`, `open`);
+    }
+  }
+
   setStorage(questionsName, questionsTel, questionsMessage);
   openModalBtn.addEventListener(`click`, onOpenModal);
   modalForm.addEventListener(`submit`, onFormSubmit);
   questionsForm.addEventListener(`submit`, onFormSubmit)
   questionsTel.addEventListener(`input`, onTelChange);
   questionsTel.addEventListener(`focus`, onTelChange);
+  window.addEventListener(`resize`, onResize);
 })();

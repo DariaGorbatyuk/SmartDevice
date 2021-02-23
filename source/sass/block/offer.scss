@@ -63,6 +63,9 @@
   margin-top: 49px;
   margin-bottom: 0;
   margin-left: 12%;
+  max-width: 100%;
+  min-width: 0;
+  word-break: break-word;
 
   @media (max-width: $m-end) {
     margin-top: 39px;
