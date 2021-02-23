@@ -83,9 +83,10 @@
 
   function onTelChange() {
     var template = /^\+7\([0-9]{3}\)[0-9]{7}/;
-    this.addEventListener(`keypress`, function (e) {
-      if (!/\d/.test(e.key))
+    this.addEventListener('keypress', function (e) {
+      if (!/\d/.test(e.key)) {
         e.preventDefault();
+      }
     });
     if (this.value.length === 0) {
       this.value = '+7(';
