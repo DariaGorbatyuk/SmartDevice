@@ -1,5 +1,6 @@
 'use strict';
 (function () {
+  var MEDIUM_WIDTH = 768;
   var body = document.querySelector('body');
   var modalTemplate = document.querySelector('#modal').content.querySelector('.modal');
   var newModal = modalTemplate.cloneNode(true);
@@ -13,7 +14,7 @@
   var lastLength = 2;
 
 
-  if (document.documentElement.clientWidth < 768) {
+  if (document.documentElement.clientWidth < MEDIUM_WIDTH) {
     detailsNav.removeAttribute('open');
   }
 
@@ -106,7 +107,7 @@
   }
 
   function onResize() {
-    if (document.documentElement.clientWidth < 768) {
+    if (document.documentElement.clientWidth < MEDIUM_WIDTH) {
       detailsNav.removeAttribute('open');
     } else {
       detailsNav.setAttribute('open', 'open');
