@@ -10,6 +10,7 @@
   var questionsName = questionsForm.querySelector('#name');
   var questionsMessage = questionsForm.querySelector('#text');
   var detailsNav = document.querySelector('.footer__nav details');
+  var lastLength = 2;
 
 
   if (document.documentElement.clientWidth < 768) {
@@ -92,12 +93,16 @@
       evt.currentTarget.value = '+7(';
     } else if (evt.currentTarget.value.length === 6) {
       evt.currentTarget.value = evt.currentTarget.value + ')';
+    } else if (lastLength === 8 && evt.currentTarget.value.length === 7) {
+      evt.currentTarget.value = evt.currentTarget.value.slice(0, -1);
     }
+
     if (!template.test(evt.currentTarget.value)) {
       evt.currentTarget.setCustomValidity('Пример: +7(9xx)xxxxxxx');
     } else {
       evt.currentTarget.setCustomValidity('');
     }
+    lastLength = evt.currentTarget.value.length;
   }
 
   function onResize() {
