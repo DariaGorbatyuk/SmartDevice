@@ -24,7 +24,7 @@
   display: flex;
   flex-wrap: wrap;
   position: relative;
-  padding-bottom: 42px;
+  padding-bottom: 45px;
 
   &::after {
     @include pseudo();
@@ -90,7 +90,7 @@
     flex: 0 0 100%;
     text-align: center;
     padding-bottom: 46px;
-    margin-bottom: 31px;
+    margin-bottom: 36px;
 
     img {
       margin: auto;
@@ -107,6 +107,7 @@
   @media (max-width: $s-end) {
     flex: 0 0 100%;
     max-width: none;
+    margin-top: 0
   }
 }
 
