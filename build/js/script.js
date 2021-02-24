@@ -66,36 +66,37 @@
 
   function onFormSubmit(evt) {
     evt.preventDefault();
-    if (!this.querySelector('input[name="agree"]').checked) {
+    if (!evt.currentTarget.querySelector('input[name="agree"]').checked) {
       return;
     }
     if (isStorageSupport) {
-      localStorage.setItem('name', this.querySelector('input[name="name"]').value);
-      localStorage.setItem('tel', this.querySelector('input[name="tel"]').value);
-      localStorage.setItem('message', this.querySelector('textarea[name="text"]').value);
+      localStorage.setItem('name', evt.currentTarget.querySelector('input[name="name"]').value);
+      localStorage.setItem('tel', evt.currentTarget.querySelector('input[name="tel"]').value);
+      localStorage.setItem('message', evt.currentTarget.querySelector('textarea[name="text"]').value);
     }
-    this.submit();
+    evt.currentTarget.submit();
     if (newModal) {
       newModal.remove();
     }
   }
 
 
-  function onTelChange() {
+  function onTelChange(evt) {
     var template = /^\+7\([0-9]{3}\)[0-9]{7}/;
-    this.addEventListener(`keypress`, function (e) {
-      if (!/\d/.test(e.key))
+    evt.currentTarget.addEventListener('keypress', function (e) {
+      if (!/\d/.test(e.key)) {
         e.preventDefault();
+      }
     });
-    if (this.value.length === 0) {
-      this.value = '+7(';
-    } else if (this.value.length === 6) {
-      this.value = this.value + ')';
+    if (evt.currentTarget.value.length === 0) {
+      evt.currentTarget.value = '+7(';
+    } else if (evt.currentTarget.value.length === 6) {
+      evt.currentTarget.value = evt.currentTarget.value + ')';
     }
-    if (!template.test(this.value)) {
-      this.setCustomValidity('Пример: +7(9xx)xxxxxxx');
+    if (!template.test(evt.currentTarget.value)) {
+      evt.currentTarget.setCustomValidity('Пример: +7(9xx)xxxxxxx');
     } else {
-      this.setCustomValidity('');
+      evt.currentTarget.setCustomValidity('');
     }
   }
 
