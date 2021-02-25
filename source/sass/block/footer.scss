@@ -50,6 +50,10 @@
   margin-bottom: 10px;
   padding-right: 20px;
 
+  span {
+    display: none;
+  }
+
   @media (max-width: $m-end) {
     flex: 0 0 100%;
     margin: 0;
@@ -60,6 +64,21 @@
     padding-bottom: 24px;
     align-items: center;
     position: relative;
+
+    span {
+      display: inline;
+      font-family: $mono;
+      font-weight: normal;
+      font-size: 13px;
+      line-height: 24px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: rgba($indigo, 0.5);
+      margin-top: 4px;
+      max-width: 300px;
+      min-width: 0;
+      word-break: break-word;
+    }
 
     &::after {
       @include pseudo();
@@ -73,8 +92,14 @@
   }
 
   @media (max-width: $s-end) {
-    display: block;
     padding-bottom: 41px;
+
+    span {
+      flex: 0 0 100%;
+      text-align: center;
+      margin-top: 0;
+      margin-bottom: 30px;
+    }
   }
 }
 
@@ -84,13 +109,13 @@
 
   @media (max-width: $m-end) {
     margin-bottom: 0;
+    align-self: flex-start;
   }
 
   @media (max-width: $s-end) {
     flex: 0 0 100%;
     text-align: center;
-    padding-bottom: 46px;
-    margin-bottom: 36px;
+    margin-bottom: 28px;
 
     img {
       margin: auto;
@@ -102,6 +127,7 @@
   @media (max-width: $m-end) {
     margin-top: 11px;
     max-width: 147px;
+    align-self: flex-start;
   }
 
   @media (max-width: $s-end) {
@@ -302,29 +328,13 @@
     }
 
     span {
-      position: absolute;
-      top: 36px;
-      left: 42.5%;
-      margin: 0;
-      max-width: 233px;
-      min-width: 0;
-      word-break: break-word;
-      max-height: 30px;
-      overflow: hidden;
+      display: none;
     }
   }
 
   @media (max-width: $s-end) {
     padding-top: 29px;
     justify-content: center;
-
-    span {
-      top: 124px;
-      left: 50%;
-      width: 239px;
-      transform: translateX(-50%);
-      max-width: 240px;
-    }
   }
 }
 
