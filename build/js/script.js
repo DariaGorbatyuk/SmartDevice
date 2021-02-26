@@ -62,7 +62,7 @@
     name.focus();
     tel.addEventListener('focus', onTelChange);
     tel.addEventListener('input', onTelChange);
-    name.addEventListener('input', onNameChange)
+    name.addEventListener('input', onNameChange);
     setStorage(name, tel, message);
   }
 
