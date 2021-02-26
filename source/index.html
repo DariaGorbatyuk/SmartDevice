@@ -138,24 +138,24 @@
         <h2>Остались вопросы? Задайте их нам!</h2>
         <p>Мы проконсультируем Вас бесплатно</p>
         <form class="question__form form-question" method="post" action="https://echo.htmlacademy.ru">
-          <div class="form-question__inp">
-            <label class="visually-hidden" for="name">Имя</label>
-            <input id="name" type="text" name="name" placeholder="Имя" required>
-          </div>
-          <div class="form-question__inp">
-            <label class="visually-hidden" for="tel">Телефон</label>
-            <input id="tel" type="tel" name="tel" placeholder="Телефон" maxlength="14" required>
-          </div>
-          <div class="form-question__text">
-            <label class="visually-hidden" for="text">Ваш вопрос</label>
-            <textarea id="text" placeholder="Ваш вопрос" name="text" required></textarea>
-          </div>
-          <div class="form-question__btns">
-            <div class="form-question__check">
-              <input class="visually-hidden" id="agree" type="checkbox" name="agree" required>
-              <label for="agree">Я согласен на обработку персональных данных</label>
-            </div>
-            <button class="form-question__btn" type="submit">Задать вопрос</button>
+          <ul class="form-question__list">
+            <li class="form-question__inp">
+              <label class="visually-hidden" for="name">Имя</label>
+              <input id="name" type="text" name="name" placeholder="Имя" required>
+            </li>
+            <li class="form-question__inp">
+              <label class="visually-hidden" for="tel">Телефон</label>
+              <input id="tel" type="tel" name="tel" placeholder="Телефон" maxlength="14" required>
+            </li>
+            <li class="form-question__text">
+              <label class="visually-hidden" for="text">Ваш вопрос</label>
+              <textarea id="text" placeholder="Ваш вопрос" name="text" required></textarea>
+            </li>
+          </ul>
+          <button class="form-question__btn" type="submit">Задать вопрос</button>
+          <div class="form-question__check">
+            <input class="visually-hidden" id="agree" type="checkbox" name="agree" required>
+            <label for="agree">Я согласен на обработку персональных данных</label>
           </div>
         </form>
       </div>
@@ -227,24 +227,24 @@
       <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
       <button class="modal__close" type="button" aria-label="Закрыть модальное окно"></button>
       <form class="modal__form form-question form-question--m" method="post" action="https://echo.htmlacademy.ru">
-        <div class="form-question__inp form-question__inp--m">
-          <label class="visually-hidden" for="name-m">Имя</label>
-          <input id="name-m" type="text" name="name" placeholder="Имя" required>
-        </div>
-        <div class="form-question__inp form-question__inp--m">
-          <label class="visually-hidden" for="tel-m">Телефон</label>
-          <input id="tel-m" type="tel" name="tel" placeholder="Телефон" maxlength="14" required>
-        </div>
-        <div class="form-question__text form-question__text--m">
-          <label class="visually-hidden" for="text-m">Ваш вопрос</label>
-          <textarea id="text-m" placeholder="Ваш вопрос" name="text" required></textarea>
-        </div>
-        <div class="form-question__btns form-question__btns--m">
-          <div class="form-question__check form-question__check--m">
-            <input class="visually-hidden" id="agree-m" type="checkbox" name="agree" required>
-            <label for="agree-m">Я согласен на обработку персональных данных</label>
-          </div>
-          <button class="form-question__btn form-question__btn--m" type="submit">Отправить</button>
+        <ul class="form-question__list">
+          <li class="form-question__inp form-question__inp--m">
+            <label class="visually-hidden" for="name-m">Имя</label>
+            <input id="name-m" type="text" name="name" placeholder="Имя" required>
+          </li>
+          <li class="form-question__inp form-question__inp--m">
+            <label class="visually-hidden" for="tel-m">Телефон</label>
+            <input id="tel-m" type="tel" name="tel" placeholder="Телефон" maxlength="14" required>
+          </li>
+          <li class="form-question__text form-question__text--m">
+            <label class="visually-hidden" for="text-m">Ваш вопрос</label>
+            <textarea id="text-m" placeholder="Ваш вопрос" name="text" required></textarea>
+          </li>
+        </ul>
+        <button class="form-question__btn form-question__btn--m" type="submit">Отправить</button>
+        <div class="form-question__check form-question__check--m">
+          <input class="visually-hidden" id="agree-m" type="checkbox" name="agree" required>
+          <label for="agree-m">Я согласен на обработку персональных данных</label>
         </div>
       </form>
     </div>
