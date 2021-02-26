@@ -62,6 +62,7 @@
     name.focus();
     tel.addEventListener('focus', onTelChange);
     tel.addEventListener('input', onTelChange);
+    name.addEventListener('input', onNameChange)
     setStorage(name, tel, message);
   }
 
@@ -106,6 +107,15 @@
     lastLength = evt.currentTarget.value.length;
   }
 
+  function onNameChange(evt) {
+    var regexp = /[а-яА-я]/;
+    evt.currentTarget.addEventListener('keypress', function (e) {
+      if (!regexp.test(e.key)) {
+        e.preventDefault();
+      }
+    });
+  }
+
   function onResize() {
     if (document.documentElement.clientWidth < MEDIUM_WIDTH) {
       detailsNav.removeAttribute('open');
@@ -120,5 +130,6 @@
   questionsForm.addEventListener('submit', onFormSubmit);
   questionsTel.addEventListener('input', onTelChange);
   questionsTel.addEventListener('focus', onTelChange);
+  questionsName.addEventListener('input', onNameChange);
   window.addEventListener('resize', onResize);
 })();
