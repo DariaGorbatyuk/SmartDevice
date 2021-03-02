@@ -127,12 +127,14 @@
   font-weight: normal;
   font-size: 14px;
   line-height: 16px;
-  opacity: 0.8;
   margin-top: 8px;
   flex-basis: 50%;
+  opacity: 0.8;
 
-  &:hover {
+  &:hover,
+  &:focus-within{
     opacity: 1;
+    cursor: pointer;
   }
 
   label {
