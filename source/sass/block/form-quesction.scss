@@ -135,6 +135,11 @@
   &:focus-within{
     opacity: 1;
     cursor: pointer;
+    outline: none;
+
+    label::before{
+      transform: scale(1.1);
+    }
   }
 
   label {
