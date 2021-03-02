@@ -11,6 +11,7 @@
   var questionsName = questionsForm.querySelector('#name');
   var questionsMessage = questionsForm.querySelector('#text');
   var detailsNav = document.querySelector('.footer__nav details');
+  var detailsContact = document.querySelector('.footer__contacts details');
   var lastLength = 2;
 
 
@@ -124,6 +125,19 @@
     }
   }
 
+  function onDetailsClick(evt) {
+    evt.preventDefault();
+    var details = [detailsNav, detailsContact];
+    var idSibling = Number(evt.currentTarget.dataset.id === '0' ? '1' : '0');
+    if (evt.currentTarget.hasAttribute('open')) {
+      evt.currentTarget.removeAttribute('open');
+      details[idSibling].setAttribute('open', 'open');
+    } else {
+      evt.currentTarget.setAttribute('open', 'open');
+      details[idSibling].removeAttribute('open');
+    }
+  }
+
   setStorage(questionsName, questionsTel, questionsMessage);
   openModalBtn.addEventListener('click', onOpenModal);
   modalForm.addEventListener('submit', onFormSubmit);
@@ -132,4 +146,6 @@
   questionsTel.addEventListener('focus', onTelChange);
   questionsName.addEventListener('input', onNameChange);
   window.addEventListener('resize', onResize);
+  detailsContact.addEventListener('click', onDetailsClick);
+  detailsNav.addEventListener('click', onDetailsClick);
 })();
