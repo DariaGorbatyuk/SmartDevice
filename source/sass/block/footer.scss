@@ -22,7 +22,6 @@
 
 .footer__top {
   display: flex;
-  flex-wrap: wrap;
   position: relative;
   padding-bottom: 45px;
 
@@ -38,6 +37,7 @@
 
   @media (max-width: $m-end) {
     padding-bottom: 36px;
+    flex-wrap: wrap;
   }
 
   @media (max-width: $s-end) {
@@ -46,9 +46,10 @@
 }
 
 .footer__left {
-  margin-right: auto;
+  margin-right: 13.1%;
   margin-bottom: 10px;
   padding-right: 20px;
+  flex: 0 0 236px;
 
   span {
     display: none;
@@ -189,8 +190,8 @@
 }
 
 .footer__nav {
-  flex: 0 0 450px;
-  margin-right: 14.7%;
+  flex: 0 1 610px;
+  margin-right: 2.9%;
 
   @media (max-width: $m-end) {
     flex: 0 0 50%;
@@ -218,15 +219,8 @@
 .footer__nav-list {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: column;
-  max-height: 100px;
   margin: 0;
   padding: 0;
-
-  @media (max-width: $m-end) {
-    flex-direction: row;
-    max-height: fit-content;
-  }
 
   @media (max-width: $s-end) {
     padding-bottom: 30px;
@@ -235,15 +229,45 @@
 
 .footer__nav-item {
   list-style: none;
-  max-width: 308px;
-  width: 302px;
   min-width: 0;
   word-break: break-word;
-  padding-right: 5px;
+  flex: 0 0 305px;
+
+  &:nth-child(1) {
+    order: 0;
+  }
+
+  &:nth-child(2) {
+    order: 3;
+  }
+
+  &:nth-child(3) {
+    order: 5;
+  }
+
+  &:nth-child(4) {
+    order: 7;
+  }
+
+  &:nth-child(5) {
+    order: 2;
+  }
+
+  &:nth-child(6) {
+    order: 4;
+  }
+
+  &:nth-child(7) {
+    order: 6;
+  }
 
   @media (max-width: $m-end) {
     flex-basis: 100%;
     padding-right: 0;
+
+    &:nth-child(n) {
+      order: 0;
+    }
   }
 }
 
@@ -266,6 +290,8 @@
 }
 
 .footer__contacts {
+  flex: 0 0 333px;
+
   @media (max-width: $m-end) {
     flex: 0 0 50%;
     margin-top: 40px;

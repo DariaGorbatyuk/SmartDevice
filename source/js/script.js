@@ -143,6 +143,7 @@
       evt.currentTarget.setAttribute('open', 'open');
       details[idSibling].removeAttribute('open');
     }
+    return true;
   }
 
   setStorage(questionsName, questionsTel, questionsMessage);

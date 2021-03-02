@@ -137,11 +137,11 @@
   opacity: 0.8;
 
   &:hover,
-  &:focus-within{
+  &:focus-within {
     opacity: 1;
     outline: none;
 
-    label::before{
+    label::before {
       transform: scale(1.1);
     }
   }
