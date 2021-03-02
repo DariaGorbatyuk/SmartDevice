@@ -120,13 +120,20 @@
   function onResize() {
     if (document.documentElement.clientWidth < MEDIUM_WIDTH) {
       detailsNav.removeAttribute('open');
+      detailsContact.addEventListener('click', onDetailsClick);
+      detailsNav.addEventListener('click', onDetailsClick);
     } else {
       detailsNav.setAttribute('open', 'open');
+      detailsContact.removeAttribute('click', onDetailsClick);
+      detailsNav.removeAttribute('click', onDetailsClick);
     }
   }
 
   function onDetailsClick(evt) {
     evt.preventDefault();
+    if (document.documentElement.clientWidth >= MEDIUM_WIDTH) {
+      return false;
+    }
     var details = [detailsNav, detailsContact];
     var idSibling = Number(evt.currentTarget.dataset.id === '0' ? '1' : '0');
     if (evt.currentTarget.hasAttribute('open')) {
