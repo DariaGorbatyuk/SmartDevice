@@ -134,7 +134,6 @@
   &:hover,
   &:focus-within{
     opacity: 1;
-    cursor: pointer;
     outline: none;
 
     label::before{
@@ -146,6 +145,7 @@
     display: block;
     padding-left: 36px;
     position: relative;
+    cursor: pointer;
 
     &::before {
       @include pseudo();
