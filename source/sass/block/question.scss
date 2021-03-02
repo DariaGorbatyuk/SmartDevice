@@ -1,19 +1,10 @@
 .question {
   background-color: $blue;
   color: $white;
-  background-image: url("../img/plain-group.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: 59% center;
   padding-bottom: 113px;
   padding-top: 90px;
 
-  @media (min-resolution: 2dppx) {
-    background-image: url("../img/plain-group2x.png");
-  }
-
   @media (max-width: $m-end) {
-    background-image: none;
     padding-top: 79px;
     padding-bottom: 104px;
   }
@@ -35,9 +26,18 @@
 
 .question__half {
   flex: 0 1 719px;
+  background-image: url("../img/plain-group.png");
+  background-repeat: no-repeat;
+  background-size: 210%;
+  background-position: 0;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/plain-group2x.png");
+  }
 
   @media (max-width: $m-end) {
     display: none;
+    background-image: none;
   }
 }
 
