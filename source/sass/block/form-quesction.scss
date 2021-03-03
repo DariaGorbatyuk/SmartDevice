@@ -28,6 +28,10 @@
       outline: 1px solid $white;
     }
   }
+  &--m{
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .form-question__list {
@@ -172,6 +176,7 @@
 
   &--m {
     width: 100%;
+    order: 2;
 
     label {
       padding: 0 43px 0 50px;
@@ -198,7 +203,6 @@
   background-color: transparent;
   width: 272px;
   color: inherit;
-  order: -1;
   border-radius: 5px;
   padding-bottom: 14px;
   padding-top: 14px;
@@ -219,6 +223,7 @@
   &--m {
     width: 100%;
     margin-bottom: 27px;
+    order: 1;
 
     &:hover,
     &:focus {
