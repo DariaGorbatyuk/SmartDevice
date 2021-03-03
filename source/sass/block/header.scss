@@ -30,6 +30,12 @@
       background-image: url("../img/header320-2x.png");
     }
   }
+
+  &--callback {
+    background-image: none;
+    padding-bottom: 30px;
+    margin-bottom: 50px;
+  }
 }
 
 .header__top {
@@ -52,6 +58,17 @@
     img {
       width: 38px;
       height: 38px;
+    }
+  }
+
+  &--callback {
+    &:focus {
+      outline: none;
+    }
+
+    &:hover img,
+    &:focus img {
+      transform: scale(1.04);
     }
   }
 }

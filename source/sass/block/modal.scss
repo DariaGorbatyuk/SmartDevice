@@ -18,6 +18,11 @@
   right: 0;
   margin: auto;
   background-color: rgba($black, 0.5);
+
+  &--callback {
+    position: static;
+    background-color: $white;
+  }
 }
 
 .modal__box {
@@ -32,6 +37,11 @@
   color: $white;
   animation: modal 300ms ease-in;
   animation-fill-mode: forwards;
+
+  &--callback {
+    position: static;
+    animation: none;
+  }
 
   @media (max-width: $s-end) {
     width: 100%;

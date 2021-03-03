@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Интернет магазин Smart Device предоставляет услугу по производству и монтажу печатных плат.">
+  <title>Заказать звонок</title>
+  <link rel="preload" href="fonts/ptmono-regular.woff2" as="font">
+  <link rel="preload" href="fonts/roboto-condensed-bold.woff2" as="font">
+  <link rel="preload" href="fonts/roboto-condensed-regular.woff2" as="font">
+  <link rel="icon" href="./img/settings.svg" sizes="any" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+<header class="header header--callback">
+  <div class="container">
+    <a class="header__logo header__logo--callback" href="index.html">
+      <!-- 1х: 202px -->
+      <picture>
+        <source media="(max-width: 767px)" srcset="./img/brain-small.svg">
+        <img src="./img/icon-logo.svg" alt="Вернуться на главную страницу" width="202" height="52">
+      </picture>
+    </a>
+  </div>
+</header>
+<main class="main main--callback">
+  <div class="container">
+    <div class="modal modal--callback">
+      <div class="modal__box modal__box--callback">
+        <h1>Закажите звонок</h1>
+        <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
+        <form class="modal__form form-question form-question--m" method="post" action="https://echo.htmlacademy.ru">
+          <ul class="form-question__list">
+            <li class="form-question__inp form-question__inp--m">
+              <label class="visually-hidden" for="name-m">Имя</label>
+              <input id="name-m" type="text" name="name" placeholder="Имя" required="">
+            </li>
+            <li class="form-question__inp form-question__inp--m">
+              <label class="visually-hidden" for="tel-m">Телефон</label>
+              <input id="tel-m" type="tel" name="tel" placeholder="Телефон" maxlength="14" required="">
+            </li>
+            <li class="form-question__text form-question__text--m">
+              <label class="visually-hidden" for="text-m">Ваш вопрос</label>
+              <textarea id="text-m" placeholder="Ваш вопрос" name="text"></textarea>
+            </li>
+          </ul>
+          <button class="form-question__btn form-question__btn--m" type="submit">Отправить</button>
+          <div class="form-question__check form-question__check--m">
+            <input class="visually-hidden" id="agree-m" type="checkbox" name="agree" required="">
+            <label for="agree-m">Я согласен на обработку персональных данных</label>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</main>
+</body>
+</html>
