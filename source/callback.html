@@ -25,21 +25,21 @@
     </a>
   </div>
 </header>
-<main class="main main--callback">
+<main>
   <div class="container">
     <div class="modal modal--callback">
       <div class="modal__box modal__box--callback">
         <h1>Закажите звонок</h1>
         <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
         <form class="modal__form form-question form-question--m" method="post" action="https://echo.htmlacademy.ru">
-          <ul class="form-question__list">
+          <ul class="form-question__list form-question__list--m">
             <li class="form-question__inp form-question__inp--m">
               <label class="visually-hidden" for="name-m">Имя</label>
-              <input id="name-m" type="text" name="name" placeholder="Имя" required>
+              <input id="name-m" type="text" name="name" placeholder="Имя" pattern="^[А-Яа-яЁё]+$" required>
             </li>
             <li class="form-question__inp form-question__inp--m">
               <label class="visually-hidden" for="tel-m">Телефон</label>
-              <input id="tel-m" type="tel" name="tel" placeholder="Телефон" maxlength="14" required>
+              <input id="tel-m" type="tel" name="tel" placeholder="Телефон" maxlength="14" pattern="\+?[\s\-()0-9]{11,18}$" required>
             </li>
             <li class="form-question__text form-question__text--m">
               <label class="visually-hidden" for="text-m">Ваш вопрос</label>
