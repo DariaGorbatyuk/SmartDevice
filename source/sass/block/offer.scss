@@ -44,11 +44,12 @@
   display: flex;
   flex-wrap: wrap;
   margin: 0;
-  padding: 0 8.5% 0;
+  padding: 0;
   justify-content: center;
+  margin-left: 28px;
 
   @media (max-width: $m-end) {
-    padding: 0;
+    margin-left: 0;
   }
 }
 
@@ -78,18 +79,13 @@
 
 .offer__item {
   list-style: none;
-  flex: 0 0 31.6%;
+  flex: 0 1 370px;
   min-width: 320px;
   background-size: cover;
   min-height: 620px;
   position: relative;
   margin-right: 30px;
   margin-bottom: 20px;
-
-  &:nth-child(3n+3),
-  &:last-child {
-    margin-right: 0;
-  }
 
   &--production {
     background-image: linear-gradient(rgba($indigo, 0.8)), url("../img/production.jpg");
@@ -123,6 +119,7 @@
   }
 
   @media (max-width: $m-end) {
+    max-width: none;
     flex: 0 0 100%;
     min-height: 256px;
     margin-right: 0;
