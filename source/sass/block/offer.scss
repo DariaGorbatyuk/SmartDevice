@@ -3,7 +3,7 @@
   color: $white;
   font-family: $roboto;
   padding-top: 88px;
-  padding-bottom: 106px;
+  padding-bottom: 96px;
 
   @media (max-width: $m-end) {
     padding-top: 48px;
@@ -85,7 +85,7 @@
   min-height: 620px;
   position: relative;
   margin-right: 30px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 
   &--production {
     background-image: linear-gradient(rgba($indigo, 0.8)), url("../img/production.jpg");
