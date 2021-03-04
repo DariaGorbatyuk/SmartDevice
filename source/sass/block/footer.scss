@@ -365,7 +365,7 @@
 }
 
 .footer__copyright {
-  margin-right: 28.3%;
+  margin-right: auto;
 
   @media (max-width: $m-end) {
     margin-right: 0;
@@ -382,6 +382,7 @@
 
 .footer__developed {
   @media (max-width: $s-end) {
+    margin-left: 0;
     flex: 0 0 100%;
     text-align: center;
   }
